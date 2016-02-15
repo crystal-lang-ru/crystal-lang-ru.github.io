@@ -1,5 +1,5 @@
 {% highlight ruby %}
-# A very basic HTTP server
+# Обычный HTTP сервер
 require "http/server"
 
 server = HTTP::Server.new(8080) do |context|
