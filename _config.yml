@@ -3,3 +3,4 @@ description: Crystal Programming Language's blog
 url: http://crystal-lang.org
 highlighter: pygments
 markdown: kramdown
+baseurl: /ru.crystal-lang.org
