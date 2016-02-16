@@ -3,6 +3,17 @@
 Репозиторий русской версии сайта crystal-lang.ru.
 
 
+## Установка
+
+Клонируйте репозиторий и выполните:
+
+```
+gem install jekyll
+rake build
+bundle exec jekyll serve
+```
+
+
 
 ## Как вы можете помочь
 
