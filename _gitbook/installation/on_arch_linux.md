@@ -1,6 +1,6 @@
-# On Arch Linux
+# На Arch Linux
 
-Arch Linux includes the Crystal compiler in the Community repository.
+Arch Linux включает в себя компилятор Crystal в Community репозитории.
 
 ## Install
 
