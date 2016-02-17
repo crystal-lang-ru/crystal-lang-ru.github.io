@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internals
-summary: Memory representation
+summary: Представление памяти
 thumbnail: 0x
 author: asterite
 ---

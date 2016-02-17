@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Happy birthday, Crystal!
+title: С днем рождения, Crystal!
 thumbnail: h!
-summary: Crystal is one year old
+summary: Crystal-у один год
 author: asterite
 ---
 

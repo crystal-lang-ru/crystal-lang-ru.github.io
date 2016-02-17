@@ -2,7 +2,7 @@
 layout: post
 title: Hello World
 thumbnail: Hi
-summary: The famous Hello World program written in different ways in Crystal
+summary: Знаменитая Hello World программа, разными способами написанная на Crystal
 author: asterite, waj
 ---
 

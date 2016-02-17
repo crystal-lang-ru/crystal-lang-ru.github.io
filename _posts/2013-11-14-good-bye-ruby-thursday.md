@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Good bye Ruby Thursday
+title: До свидания, Ruby Thursday
 thumbnail: :)
 summary: Bootstraped the compiler
 author: asterite

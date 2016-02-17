@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Another language
-summary: What if...
+title: Другой язык
+summary: Что если...
 thumbnail: ??
 author: asterite
 ---

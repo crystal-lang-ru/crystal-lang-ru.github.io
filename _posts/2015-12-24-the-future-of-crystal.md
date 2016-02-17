@@ -1,7 +1,7 @@
 ---
 layout: post
-title: The future of Crystal
-summary: A short story
+title: Будущее Crystal
+summary: Короткая история
 thumbnail: 🎄
 author: asterite
 ---

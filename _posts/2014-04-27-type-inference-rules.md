@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Type inference rules
-summary: Part 2 of the type inference series
+title: Правила определения типов
+summary: Часть 2
 thumbnail: T
 author: asterite
 ---

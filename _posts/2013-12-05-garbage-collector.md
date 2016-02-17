@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Garbage Collector
-summary: Enabled the Boehm GC
+title: Сборщик мусора
+summary: Используем Boehm GC
 thumbnail: gc
 author: waj
 ---

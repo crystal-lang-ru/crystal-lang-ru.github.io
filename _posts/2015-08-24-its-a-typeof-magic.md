@@ -1,7 +1,7 @@
 ---
 layout: post
-title: It's a typeof magic
-summary: It's magic!
+title: Магия typeof
+summary: Это магия!
 thumbnail: t
 author: asterite
 ---

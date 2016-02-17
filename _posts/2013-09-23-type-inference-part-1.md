@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Type inference (part 1)
+title: Определение типов (часть 1)
 thumbnail: x=
-summary: How type inference works
+summary: Как это работает
 author: bcardiff
 ---
 

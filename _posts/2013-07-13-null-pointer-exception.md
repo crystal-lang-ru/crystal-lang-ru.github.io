@@ -2,7 +2,7 @@
 layout: post
 title: Null Pointer Exception
 thumbnail: NP
-summary: Crystal doesn't let you have a Null Pointer Exception
+summary: Crystal не позволит случиться Null Pointer Exception
 author: asterite
 ---
 
