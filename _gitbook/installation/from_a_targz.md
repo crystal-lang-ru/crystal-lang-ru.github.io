@@ -1,13 +1,13 @@
-# From a tar.gz
+# Из архива tar.gz
 
-If for any reason you can't or don't want to use one of the previous installation methods, you can still download Crystal in a standalone .tar.gz file with everything you need to get started.
+Если по какой то причине вы не можете или не хотите использовать один и предыдущих методов установки, вы можете скачать .tar.gz файл со всем необходимым для начала работы.
 
-The latest files can be found on the Releases page at GitHub: https://github.com/manastech/crystal/releases
+Последнию версию вы можете найти на странице Релизов на GitHub: https://github.com/manastech/crystal/releases
 
-Download the file for your platform and uncompress it. Inside it you will have a `bin/crystal` executable.
+Скачайте файл для вашей платформы и разархивируйте его. Внутри будет исполняемый файл `bin/crystal`
 
-To make it simpler to use, you can create a symbolic link available in the path:
+Чтобы сделать его удобнее и доступнее создайте символьную ссылку:
 
 `ln -s [full path to bin/crystal] /usr/local/bin/crystal`
 
-Then you can invoke the compiler by just typing `crystal`.
+Теперь вы можете вызывать компилятор, просто напечатав `crystal` в командной строке.
