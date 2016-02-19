@@ -1,7 +1,7 @@
-# Comments
+# Комментарии
 
-Comments start with the sharp (`#`) character. Only one-line comments are supported for now.
+Комментарии начинаются с символа "решетка" (`#`). Поддерживаются только однострочные комментарии.
 
 ```crystal
-# This is a comment
+# Это комментарий
 ```
