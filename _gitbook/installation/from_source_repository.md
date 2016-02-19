@@ -1,19 +1,19 @@
-# From sources
+# Из репозитория
 
-If you want to contribute then you might want to install Crystal from sources. But Crystal is written in Crystal itself! So you first need to use one of the previous described methods to have a running compiler.
+Если вы хотите внести свой вклад, вы можете установить Crystal из репозитория. Но Crystal написан на самом себе! Поэтому в первую очередь вам нужно использовать один из выше описанных способов для установки, чтобы иметь работающий компилятор.
 
-You will also need LLVM 3.5 or 3.6 present in the path. If you are using Mac and the Homebrew formula, this will be automatically configured for you if you install Crystal adding `--with-llvm` flag.
+Также вам понадобится LLVM 3.5 или 3.6 присутствующий в пути. Если вы используете Mac и Homebrew, это будет установлено автоматически, если вы просто добавите `--with-llvm` флаг.
 
-Then clone the repository:
+Затем склонируйте репозиторий:
 
 ```
 git clone https://github.com/manastech/crystal.git
 ```
 
-and you're ready to start hacking.
+и все готово к разработке.
 
-To build your own version of the compiler, run `make`. The new compiler will be placed at `.build/crystal`.
+Чтобы создать собственную версию компилятора, запустите `make`. Новая версия будет размещена тут `.build/crystal`
 
-Make sure to install [all the required libraries](https://github.com/manastech/crystal/wiki/All-required-libraries). You might also want to read the [contributing guide](https://github.com/manastech/crystal/blob/master/Contributing.md).
+Убедитесь, что установлены [все необходимые библиотеки](https://github.com/manastech/crystal/wiki/All-required-libraries). Также вы можете прочитать [гид для контрибьюторов](https://github.com/manastech/crystal/blob/master/Contributing.md).
 
-Inside the repository you will also find a wrapper script at `bin/crystal`. This script will execute the global installed compiler or the one that you just compiled (if present).
+Внутри репозитория вы также найдете скрипт-обертку `bin/crystal`. Этот скрипт будет запускать только что скомпилированную версию, если она существует. В другом случае он будет запускать глобально установленный компилятор.
