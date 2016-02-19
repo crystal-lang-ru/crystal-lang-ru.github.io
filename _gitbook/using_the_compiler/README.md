@@ -1,52 +1,52 @@
-# Using the compiler
+# Работа с компилятором
 
-Once you [install](../installation/README.md) the compiler you will have a `crystal` binary at your disposal.
+После [установки](../installation/README.md) компилятора `crystal` в вашем распоряжении.
 
-In the next sections a dollar sign (`$`) denotes the command line.
+В следующих разделах знак доллар (`$`) обозначает командную строку.
 
-## Compiling and running at once
+## Компиляция и моментальное выполнение
 
-To compile and run a program in a single shot you can invoke `crystal` with a single filename:
+Скомпилировать и запустить программу вы можете набрав `crystal` с именем файла:
 
 ```
 $ crystal some_program.cr
 ```
 
-Crystal files end with the `.cr` extension.
+Файлы исходного кода Crystal имеют расширение `.cr`.
 
-Alternative you can use the `run` command:
+Альтернативой может служить команда `run`:
 
 ```
 $ crystal run some_program.cr
 ```
 
-## Creating an executable
+## Создание исполняемого файла
 
-To create an executable use the `build` command:
+Используйте команду `build` чтобы создать исполняемый файл:
 
 ```
 $ crystal build some_program.cr
 ```
 
-This will create a `some_program` file that you can execute:
+Это создаст `some_program` файл, который можно выполнить:
 
 ```
 $ ./some_program
 ```
 
-**Note:** By default the generated executables **are not fully optimized**. To turn optimizations on, use the `--release` flag:
+**Примечание:** По умолчанию сгенерированные файлы **не полностью оптимизированы**. Чтобы включить полную оптимизацию, используйте флаг `--release`:
 
 ```
 $ crystal build some_program.cr --release
 ```
 
-Make sure to always use `--release` for production-ready executables and when performing benchmarks.
+Всегда используйте флаг `--release` для готовых к продакшену исполняемых файлов и для проведения бенчмарков.
 
-The reason for this is that performance without full optimizations is still pretty good and provides fast compile times, so you can use the `crystal` command almost as if it were an interpreter.
+Причиной этому является то, что производительность без полной оптимизации довольно хорошая и обеспечивает быстрое время компиляции, так что вы можете использовать команду `crystal` как будто это интерпретатор.
 
-## Creating a project or library
+## Создание проекта или библиотеки
 
-Use the `init` command to create a Crystal project with the standard directory structure.
+Используйте команду `init` чтобы создать Crystal проект со стандартной структурой директорий.
 
 ```
 $ crystal init lib MyCoolLib
@@ -62,9 +62,9 @@ $ crystal init lib MyCoolLib
 Initialized empty Git repository in ~/MyCoolLib/.git/
 ```
 
-## Other commands and options
+## Другие команды и опции
 
-To see the full set of commands, invoke `crystal` without arguments.
+Чтобы посмотреть полный список команд, наберите `crystal` без аргументов.
 
 ```
 $ crystal
@@ -83,7 +83,7 @@ Command:
     --version, -v            show version
 ```
 
-To see the available options for a particuar command, use `--help` after a command:
+Чтобы увидеть доступные параметры для каждой команды, используйте флаг `--help` после команды:
 
 ```
 $ crystal build --help

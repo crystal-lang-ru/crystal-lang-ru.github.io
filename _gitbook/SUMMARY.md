@@ -8,7 +8,7 @@
    * [На Mac OSX используя Homebrew](installation/on_mac_osx_using_homebrew.md)
    * [Из tar.gz](installation/from_a_targz.md)
    * [Из репозитория](installation/from_source_repository.md)
-* [Using the compiler](using_the_compiler/README.md)
+* [Работа с компилятором](using_the_compiler/README.md)
 * [Overview and Examples](overview/README.md)
    * [Hello World!](overview/hello_world.md)
    * [HTTP Server](overview/http_server.md)
