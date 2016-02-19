@@ -1,6 +1,6 @@
 # Array
 
-An [Array](http://crystal-lang.org/api/Array.html) is a generic type containing elements of a type `T`. It is typically created with an array literal:
+[Array](http://crystal-lang.org/api/Array.html) (Массив) это универсальная структура данных, содержащая элементы типа `T`. Обычно создается с помощью литералов массива:
 
 ```crystal
 [1, 2, 3]         # Array(Int32)
@@ -8,39 +8,41 @@ An [Array](http://crystal-lang.org/api/Array.html) is a generic type containing 
 ```
 
 An Array can have mixed types, meaning `T` will be a union of types, but these are determined when the array is created, either by specifying T or by using an array literal. In the latter case, T will be set to the union of the array literal elements.
+Массив может иметь смешанный тип, это значит, что `T` будет являться объединением типов, и они будут вычисляться при создании массива, либо при явном определении `T`, либо используя литерал массива. В последнем случае T будет определено как литералов массива.
 
-When creating an empty array you must always specify T:
+При создании пустого массива мы всегда должны определить T:
 
 ```crystal
-[] of Int32 # same as Array(Int32).new
-[]          # syntax error
+[] of Int32 # создастся как Array(Int32).new
+[]          # синтаксическая ошибка
 ```
 
-## Array of String
+## Массив строк
 
-Arrays of strings can be created with a special syntax:
+Массивы строк могут быть созданы с помощью специального синтаксиса:
 
 ```crystal
 %w(one two three) # ["one", "two", "three"]
 ```
 
-## Array of Symbol
+## Массив символов
 
-Arrays of symbols can be created with a special syntax:
+Массивы символов также могут быть созданы с помощью специального синтаксиса:
 
 ```crystal
 %i(one two three) # [:one, :two, :three]
 ```
 
-## Array-like types
+## Array-like types Array-подобные типы
 
 You can use a special array literal syntax with other types too, as long as they define an argless `new` method and a `<<` method:
+Вы можете использовать синтаксис литералов массива вместе с другими типами, если у них определены методы `new` (без аргументов) и `<<`:
 
 ```crystal
 MyType{1, 2, 3}
 ```
 
-If `MyType` is not generic, the above is equivalent to this:
+Если `MyType` не универсальный:
 
 ```crystal
 tmp = MyType.new
@@ -50,7 +52,7 @@ tmp << 3
 tmp
 ```
 
-If `MyType` is generic, the above is equivalent to this:
+Если `MyType` универсальный:
 
 ```crystal
 tmp = MyType(typeof(1, 2, 3)).new
@@ -60,7 +62,7 @@ tmp << 3
 tmp
 ```
 
-In the case of a generic type, the type arguments can be specified too:
+В случае использования универсального типа тип аргументов также может быть определен:
 
 ```crystal
 MyType(Int32 | String) {1, 2, "foo"}

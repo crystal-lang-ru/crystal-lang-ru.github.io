@@ -1,3 +1,3 @@
-# Literals
+# Литералы
 
-Several literals are available for creating many basic types in the language.
+Несколько литералов доступны для создания многих базовых типов языка.
