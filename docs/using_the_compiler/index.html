@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>Using the compiler | Язык программирования Crystal</title>
+        <title>Работа с компилятором | Язык программирования Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="2" data-basepath=".." data-revision="Thu Feb 18 2016 04:13:17 GMT+0600 (ALMT)">
+    <div class="book" data-level="2" data-basepath=".." data-revision="Fri Feb 19 2016 20:36:23 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -186,7 +186,7 @@
                         
                             <b>2.</b>
                         
-                        Using the compiler
+                        Работа с компилятором
                     </a>
             
             
@@ -1995,26 +1995,26 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="using-the-compiler">Using the compiler</h1>
-<p>Once you <a href="../installation/index.html">install</a> the compiler you will have a <code>crystal</code> binary at your disposal.</p>
-<p>In the next sections a dollar sign (<code>$</code>) denotes the command line.</p>
-<h2 id="compiling-and-running-at-once">Compiling and running at once</h2>
-<p>To compile and run a program in a single shot you can invoke <code>crystal</code> with a single filename:</p>
+                        <h1 id="%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%82%D0%BE%D1%80%D0%BE%D0%BC">&#x420;&#x430;&#x431;&#x43E;&#x442;&#x430; &#x441; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x43E;&#x43C;</h1>
+<p>&#x41F;&#x43E;&#x441;&#x43B;&#x435; <a href="../installation/index.html">&#x443;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43A;&#x438;</a> &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440;&#x430; <code>crystal</code> &#x432; &#x432;&#x430;&#x448;&#x435;&#x43C; &#x440;&#x430;&#x441;&#x43F;&#x43E;&#x440;&#x44F;&#x436;&#x435;&#x43D;&#x438;&#x438;.</p>
+<p>&#x412; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x445; &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x430;&#x445; &#x437;&#x43D;&#x430;&#x43A; &#x434;&#x43E;&#x43B;&#x43B;&#x430;&#x440; (<code>$</code>) &#x43E;&#x431;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x435;&#x442; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x43D;&#x443;&#x44E; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;.</p>
+<h2 id="%D0%BA%D0%BE%D0%BC%D0%BF%D0%B8%D0%BB%D1%8F%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5">&#x41A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x446;&#x438;&#x44F; &#x438; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x435; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x435;</h2>
+<p>&#x421;&#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x438; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x443; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43D;&#x430;&#x431;&#x440;&#x430;&#x432; <code>crystal</code> &#x441; &#x438;&#x43C;&#x435;&#x43D;&#x435;&#x43C; &#x444;&#x430;&#x439;&#x43B;&#x430;:</p>
 <pre><code>$ crystal some_program.cr
-</code></pre><p>Crystal files end with the <code>.cr</code> extension.</p>
-<p>Alternative you can use the <code>run</code> command:</p>
+</code></pre><p>&#x424;&#x430;&#x439;&#x43B;&#x44B; &#x438;&#x441;&#x445;&#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x434;&#x430; Crystal &#x438;&#x43C;&#x435;&#x44E;&#x442; &#x440;&#x430;&#x441;&#x448;&#x438;&#x440;&#x435;&#x43D;&#x438;&#x435; <code>.cr</code>.</p>
+<p>&#x410;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x43E;&#x439; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x441;&#x43B;&#x443;&#x436;&#x438;&#x442;&#x44C; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x430; <code>run</code>:</p>
 <pre><code>$ crystal run some_program.cr
-</code></pre><h2 id="creating-an-executable">Creating an executable</h2>
-<p>To create an executable use the <code>build</code> command:</p>
+</code></pre><h2 id="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0">&#x421;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x43C;&#x43E;&#x433;&#x43E; &#x444;&#x430;&#x439;&#x43B;&#x430;</h2>
+<p>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x443; <code>build</code> &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x43C;&#x44B;&#x439; &#x444;&#x430;&#x439;&#x43B;:</p>
 <pre><code>$ crystal build some_program.cr
-</code></pre><p>This will create a <code>some_program</code> file that you can execute:</p>
+</code></pre><p>&#x42D;&#x442;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x441;&#x442; <code>some_program</code> &#x444;&#x430;&#x439;&#x43B;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x44C;:</p>
 <pre><code>$ ./some_program
-</code></pre><p><strong>Note:</strong> By default the generated executables <strong>are not fully optimized</strong>. To turn optimizations on, use the <code>--release</code> flag:</p>
+</code></pre><p><strong>&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x447;&#x430;&#x43D;&#x438;&#x435;:</strong> &#x41F;&#x43E; &#x443;&#x43C;&#x43E;&#x43B;&#x447;&#x430;&#x43D;&#x438;&#x44E; &#x441;&#x433;&#x435;&#x43D;&#x435;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x44B;&#x435; &#x444;&#x430;&#x439;&#x43B;&#x44B; <strong>&#x43D;&#x435; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x43E;&#x43F;&#x442;&#x438;&#x43C;&#x438;&#x437;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x44B;</strong>. &#x427;&#x442;&#x43E;&#x431;&#x44B; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x44C; &#x43F;&#x43E;&#x43B;&#x43D;&#x443;&#x44E; &#x43E;&#x43F;&#x442;&#x438;&#x43C;&#x438;&#x437;&#x430;&#x446;&#x438;&#x44E;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x444;&#x43B;&#x430;&#x433; <code>--release</code>:</p>
 <pre><code>$ crystal build some_program.cr --release
-</code></pre><p>Make sure to always use <code>--release</code> for production-ready executables and when performing benchmarks.</p>
-<p>The reason for this is that performance without full optimizations is still pretty good and provides fast compile times, so you can use the <code>crystal</code> command almost as if it were an interpreter.</p>
-<h2 id="creating-a-project-or-library">Creating a project or library</h2>
-<p>Use the <code>init</code> command to create a Crystal project with the standard directory structure.</p>
+</code></pre><p>&#x412;&#x441;&#x435;&#x433;&#x434;&#x430; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x444;&#x43B;&#x430;&#x433; <code>--release</code> &#x434;&#x43B;&#x44F; &#x433;&#x43E;&#x442;&#x43E;&#x432;&#x44B;&#x445; &#x43A; &#x43F;&#x440;&#x43E;&#x434;&#x430;&#x43A;&#x448;&#x435;&#x43D;&#x443; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x43C;&#x44B;&#x445; &#x444;&#x430;&#x439;&#x43B;&#x43E;&#x432; &#x438; &#x434;&#x43B;&#x44F; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x438;&#x44F; &#x431;&#x435;&#x43D;&#x447;&#x43C;&#x430;&#x440;&#x43A;&#x43E;&#x432;.</p>
+<p>&#x41F;&#x440;&#x438;&#x447;&#x438;&#x43D;&#x43E;&#x439; &#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x442;&#x43E;, &#x447;&#x442;&#x43E; &#x43F;&#x440;&#x43E;&#x438;&#x437;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x431;&#x435;&#x437; &#x43F;&#x43E;&#x43B;&#x43D;&#x43E;&#x439; &#x43E;&#x43F;&#x442;&#x438;&#x43C;&#x438;&#x437;&#x430;&#x446;&#x438;&#x438; &#x434;&#x43E;&#x432;&#x43E;&#x43B;&#x44C;&#x43D;&#x43E; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x430;&#x44F; &#x438; &#x43E;&#x431;&#x435;&#x441;&#x43F;&#x435;&#x447;&#x438;&#x432;&#x430;&#x435;&#x442; &#x431;&#x44B;&#x441;&#x442;&#x440;&#x43E;&#x435; &#x432;&#x440;&#x435;&#x43C;&#x44F; &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x446;&#x438;&#x438;, &#x442;&#x430;&#x43A; &#x447;&#x442;&#x43E; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x443; <code>crystal</code> &#x43A;&#x430;&#x43A; &#x431;&#x443;&#x434;&#x442;&#x43E; &#x44D;&#x442;&#x43E; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x43F;&#x440;&#x435;&#x442;&#x430;&#x442;&#x43E;&#x440;.</p>
+<h2 id="%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%B8%D0%BB%D0%B8-%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B8">&#x421;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x435; &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442;&#x430; &#x438;&#x43B;&#x438; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A;&#x438;</h2>
+<p>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x443; <code>init</code> &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x442;&#x44C; Crystal &#x43F;&#x440;&#x43E;&#x435;&#x43A;&#x442; &#x441;&#x43E; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x439; &#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x443;&#x440;&#x43E;&#x439; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x438;&#x439;.</p>
 <pre><code>$ crystal init lib MyCoolLib
       create  MyCoolLib/.gitignore
       create  MyCoolLib/LICENSE
@@ -2026,8 +2026,8 @@
       create  MyCoolLib/spec/spec_helper.cr
       create  MyCoolLib/spec/MyCoolLib_spec.cr
 Initialized empty Git repository in ~/MyCoolLib/.git/
-</code></pre><h2 id="other-commands-and-options">Other commands and options</h2>
-<p>To see the full set of commands, invoke <code>crystal</code> without arguments.</p>
+</code></pre><h2 id="%D0%B4%D1%80%D1%83%D0%B3%D0%B8%D0%B5-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-%D0%B8-%D0%BE%D0%BF%D1%86%D0%B8%D0%B8">&#x414;&#x440;&#x443;&#x433;&#x438;&#x435; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x44B; &#x438; &#x43E;&#x43F;&#x446;&#x438;&#x438;</h2>
+<p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x43F;&#x43E;&#x441;&#x43C;&#x43E;&#x442;&#x440;&#x435;&#x442;&#x44C; &#x43F;&#x43E;&#x43B;&#x43D;&#x44B;&#x439; &#x441;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;, &#x43D;&#x430;&#x431;&#x435;&#x440;&#x438;&#x442;&#x435; <code>crystal</code> &#x431;&#x435;&#x437; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x43E;&#x432;.</p>
 <pre><code>$ crystal
 Usage: crystal [command] [switches] [program file] [--] [arguments]
 
@@ -2042,7 +2042,7 @@ Command:
     tool                     run a tool
     --help, -h               show this help
     --version, -v            show version
-</code></pre><p>To see the available options for a particuar command, use <code>--help</code> after a command:</p>
+</code></pre><p>&#x427;&#x442;&#x43E;&#x431;&#x44B; &#x443;&#x432;&#x438;&#x434;&#x435;&#x442;&#x44C; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x44B;&#x435; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x44B; &#x434;&#x43B;&#x44F; &#x43A;&#x430;&#x436;&#x434;&#x43E;&#x439; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x44B;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; &#x444;&#x43B;&#x430;&#x433; <code>--help</code> &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x43A;&#x43E;&#x43C;&#x430;&#x43D;&#x434;&#x44B;:</p>
 <pre><code>$ crystal build --help
 Usage: crystal build [options] [programfile] [--] [arguments]
 
