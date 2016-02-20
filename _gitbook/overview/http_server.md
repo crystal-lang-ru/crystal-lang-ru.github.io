@@ -1,6 +1,6 @@
-# HTTP Server
+# HTTP сервер
 
-A slightly more interesting example is an HTTP Server:
+Немного более интересным примером является HTTP сервер:
 
 ```crystal
 require "http/server"
@@ -14,20 +14,20 @@ puts "Listening on http://0.0.0.0:8080"
 server.listen
 ```
 
-The above code will make sense once you read the whole documentation, but we can already learn some things.
+Приведенный код выше будет иметь смысл только если вы прочитаете всю документацию, но вы уже можете кое-чему научиться.
 
-* You can [require](../syntax_and_semantics/requiring_files.html) code defined in other files:
+* Вы можете [подключить](../syntax_and_semantics/requiring_files.html) код из других файлов:
 
     ```ruby
     require "http/server"
     ```
-* You can define [local variables](../syntax_and_semantics/local_variables.html) without the need to specify their type:
+* Вы можете определить [локальную переменную](../syntax_and_semantics/local_variables.html) без необходимости указывать ее тип:
 
     ```ruby
     server = HTTP::Server.new ...
     ```
 
-* You program by invoking [methods](../syntax_and_semantics/classes_and_methods.html) (or sending messages) to objects.
+* Ваша программа вызывает [методы](../syntax_and_semantics/classes_and_methods.html) (или посылает сообщения) объектам.
 
     ```ruby
     HTTP::Server.new(8000) ...
@@ -39,7 +39,7 @@ The above code will make sense once you read the whole documentation, but we can
     server.listen
     ```
 
-* You can use code blocks, or simply [blocks](../syntax_and_semantics/blocks_and_procs.html), which are a very convenient way to reuse code and get some features from the functional world:
+* Вы можете использовать блоки кода, или просто [блоки](../syntax_and_semantics/blocks_and_procs.html), которые представляют собой очень удобный способ повторного использования кода и дают возможность получить некоторые особенности из мира функционального программирования:
 
     ```ruby
     HTTP::Server.new(8080) do |context|
@@ -47,10 +47,8 @@ The above code will make sense once you read the whole documentation, but we can
     end
     ```
 
-* You can easily create strings with embedded content, known as string interpolation. The language comes with other [syntax](../syntax_and_semantics/literals.html) as well to create arrays, hashes, ranges, tuples and more:
+* Вы легко можете создавать строки со "встроенным" контентом, который также называется интерполяция строк. Язык также предоставляет другой [синтаксис](../syntax_and_semantics/literals.html) для создания arrays(массивов), hashes(хэшей), ranges(диапазонов), tuples(тьюплов/кортежей) и прочего:
 
     ```ruby
     "Hello world! The time is #{Time.now}"
     ```
-
-
