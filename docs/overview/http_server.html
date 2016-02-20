@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>HTTP Server | Язык программирования Crystal</title>
+        <title>HTTP сервер | Язык программирования Crystal</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.3.2">
@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="3.2" data-basepath=".." data-revision="Fri Feb 19 2016 20:36:23 GMT+1000 (VLAT)">
+    <div class="book" data-level="3.2" data-basepath=".." data-revision="Sun Feb 21 2016 00:53:43 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -201,7 +201,7 @@
                         
                             <b>3.</b>
                         
-                        Overview and Examples
+                        Обзор и примеры
                     </a>
             
             
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP Server
+                        HTTP сервер
                     </a>
             
             
@@ -1995,8 +1995,8 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="http-server">HTTP Server</h1>
-<p>A slightly more interesting example is an HTTP Server:</p>
+                        <h1 id="http-%D1%81%D0%B5%D1%80%D0%B2%D0%B5%D1%80">HTTP &#x441;&#x435;&#x440;&#x432;&#x435;&#x440;</h1>
+<p>&#x41D;&#x435;&#x43C;&#x43D;&#x43E;&#x433;&#x43E; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x435;&#x441;&#x43D;&#x44B;&#x43C; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x43E;&#x43C; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; HTTP &#x441;&#x435;&#x440;&#x432;&#x435;&#x440;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">require</span> <span class="hljs-string">&quot;http/server&quot;</span>
 
 server = <span class="hljs-constant">HTTP::Server</span>.new(<span class="hljs-number">8080</span>) <span class="hljs-keyword">do</span> |context|
@@ -2007,17 +2007,17 @@ server = <span class="hljs-constant">HTTP::Server</span>.new(<span class="hljs-n
 puts <span class="hljs-string">&quot;Listening on http://0.0.0.0:8080&quot;</span>
 server.listen
 </code></pre>
-<p>The above code will make sense once you read the whole documentation, but we can already learn some things.</p>
+<p>&#x41F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43A;&#x43E;&#x434; &#x432;&#x44B;&#x448;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; &#x438;&#x43C;&#x435;&#x442;&#x44C; &#x441;&#x43C;&#x44B;&#x441;&#x43B; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B; &#x43F;&#x440;&#x43E;&#x447;&#x438;&#x442;&#x430;&#x435;&#x442;&#x435; &#x432;&#x441;&#x44E; &#x434;&#x43E;&#x43A;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x446;&#x438;&#x44E;, &#x43D;&#x43E; &#x432;&#x44B; &#x443;&#x436;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43A;&#x43E;&#x435;-&#x447;&#x435;&#x43C;&#x443; &#x43D;&#x430;&#x443;&#x447;&#x438;&#x442;&#x44C;&#x441;&#x44F;.</p>
 <ul>
-<li><p>You can <a href="../syntax_and_semantics/requiring_files.html">require</a> code defined in other files:</p>
+<li><p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; <a href="../syntax_and_semantics/requiring_files.html">&#x43F;&#x43E;&#x434;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x44C;</a> &#x43A;&#x43E;&#x434; &#x438;&#x437; &#x434;&#x440;&#x443;&#x433;&#x438;&#x445; &#x444;&#x430;&#x439;&#x43B;&#x43E;&#x432;:</p>
 <pre><code class="lang-ruby">  <span class="hljs-keyword">require</span> <span class="hljs-string">&quot;http/server&quot;</span>
 </code></pre>
 </li>
-<li><p>You can define <a href="../syntax_and_semantics/local_variables.html">local variables</a> without the need to specify their type:</p>
+<li><p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x438;&#x442;&#x44C; <a href="../syntax_and_semantics/local_variables.html">&#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x443;&#x44E; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x443;&#x44E;</a> &#x431;&#x435;&#x437; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438; &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x442;&#x44C; &#x435;&#x435; &#x442;&#x438;&#x43F;:</p>
 <pre><code class="lang-ruby">  server = <span class="hljs-constant">HTTP::Server</span>.new ...
 </code></pre>
 </li>
-<li><p>You program by invoking <a href="../syntax_and_semantics/classes_and_methods.html">methods</a> (or sending messages) to objects.</p>
+<li><p>&#x412;&#x430;&#x448;&#x430; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x430; &#x432;&#x44B;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; <a href="../syntax_and_semantics/classes_and_methods.html">&#x43C;&#x435;&#x442;&#x43E;&#x434;&#x44B;</a> (&#x438;&#x43B;&#x438; &#x43F;&#x43E;&#x441;&#x44B;&#x43B;&#x430;&#x435;&#x442; &#x441;&#x43E;&#x43E;&#x431;&#x449;&#x435;&#x43D;&#x438;&#x44F;) &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430;&#x43C;.</p>
 <pre><code class="lang-ruby">  <span class="hljs-constant">HTTP::Server</span>.new(<span class="hljs-number">8000</span>) ...
   ...
   <span class="hljs-constant">Time</span>.now
@@ -2027,13 +2027,13 @@ server.listen
   server.listen
 </code></pre>
 </li>
-<li><p>You can use code blocks, or simply <a href="../syntax_and_semantics/blocks_and_procs.html">blocks</a>, which are a very convenient way to reuse code and get some features from the functional world:</p>
+<li><p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x431;&#x43B;&#x43E;&#x43A;&#x438; &#x43A;&#x43E;&#x434;&#x430;, &#x438;&#x43B;&#x438; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; <a href="../syntax_and_semantics/blocks_and_procs.html">&#x431;&#x43B;&#x43E;&#x43A;&#x438;</a>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x442; &#x441;&#x43E;&#x431;&#x43E;&#x439; &#x43E;&#x447;&#x435;&#x43D;&#x44C; &#x443;&#x434;&#x43E;&#x431;&#x43D;&#x44B;&#x439; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431; &#x43F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x43D;&#x43E;&#x433;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x43A;&#x43E;&#x434;&#x430; &#x438; &#x434;&#x430;&#x44E;&#x442; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E;&#x441;&#x442;&#x44C; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x44C; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43E;&#x441;&#x43E;&#x431;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x438; &#x438;&#x437; &#x43C;&#x438;&#x440;&#x430; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x438;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x43C;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F;:</p>
 <pre><code class="lang-ruby">  <span class="hljs-constant">HTTP::Server</span>.new(<span class="hljs-number">8080</span>) <span class="hljs-keyword">do</span> |context|
     ...
   <span class="hljs-keyword">end</span>
 </code></pre>
 </li>
-<li><p>You can easily create strings with embedded content, known as string interpolation. The language comes with other <a href="../syntax_and_semantics/literals.html">syntax</a> as well to create arrays, hashes, ranges, tuples and more:</p>
+<li><p>&#x412;&#x44B; &#x43B;&#x435;&#x433;&#x43A;&#x43E; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x432;&#x430;&#x442;&#x44C; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x438; &#x441;&#x43E; &quot;&#x432;&#x441;&#x442;&#x440;&#x43E;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&quot; &#x43A;&#x43E;&#x43D;&#x442;&#x435;&#x43D;&#x442;&#x43E;&#x43C;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x43D;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x438;&#x43D;&#x442;&#x435;&#x440;&#x43F;&#x43E;&#x43B;&#x44F;&#x446;&#x438;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;. &#x42F;&#x437;&#x44B;&#x43A; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x43F;&#x440;&#x435;&#x434;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x439; <a href="../syntax_and_semantics/literals.html">&#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;</a> &#x434;&#x43B;&#x44F; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x43D;&#x438;&#x44F; arrays(&#x43C;&#x430;&#x441;&#x441;&#x438;&#x432;&#x43E;&#x432;), hashes(&#x445;&#x44D;&#x448;&#x435;&#x439;), ranges(&#x434;&#x438;&#x430;&#x43F;&#x430;&#x437;&#x43E;&#x43D;&#x43E;&#x432;), tuples(&#x442;&#x44C;&#x44E;&#x43F;&#x43B;&#x43E;&#x432;/&#x43A;&#x43E;&#x440;&#x442;&#x435;&#x436;&#x435;&#x439;) &#x438; &#x43F;&#x440;&#x43E;&#x447;&#x435;&#x433;&#x43E;:</p>
 <pre><code class="lang-ruby">  <span class="hljs-string">&quot;Hello world! The time is <span class="hljs-subst">#{<span class="hljs-constant">Time</span>.now}</span>&quot;</span>
 </code></pre>
 </li>
