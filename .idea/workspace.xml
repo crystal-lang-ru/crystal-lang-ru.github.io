@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79242d58-12a3-4969-ac3f-176ca14b82b7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gitbook/images/apple-touch-icon-precomposed-152.png" afterPath="$PROJECT_DIR$/docs/gitbook/images/apple-touch-icon-precomposed-152.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gitbook/images/favicon.ico" afterPath="$PROJECT_DIR$/docs/gitbook/images/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_gitbook/overview/hello_world.md" afterPath="$PROJECT_DIR$/_gitbook/overview/hello_world.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/gitbook/app.js" afterPath="$PROJECT_DIR$/docs/gitbook/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/overview/hello_world.html" afterPath="$PROJECT_DIR$/docs/overview/hello_world.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/search_index.json" afterPath="$PROJECT_DIR$/docs/search_index.json" />
-    </list>
+    <list default="true" id="79242d58-12a3-4969-ac3f-176ca14b82b7" name="Default" comment="" />
     <ignored path="ru.crystal-lang.org.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -37,7 +28,7 @@
           </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.2287695">
-              <caret line="6" column="122" selection-start-line="6" selection-start-column="122" selection-end-line="6" selection-end-column="122" />
+              <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -212,7 +203,7 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2287695">
-          <caret line="6" column="122" selection-start-line="6" selection-start-column="122" selection-end-line="6" selection-end-column="122" />
+          <caret line="6" column="56" selection-start-line="6" selection-start-column="56" selection-end-line="6" selection-end-column="56" />
           <folding />
         </state>
       </provider>
