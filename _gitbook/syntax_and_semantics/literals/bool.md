@@ -4,6 +4,6 @@
 
 
 ```crystal
-true  # Bool в значении "истина""
+true  # Bool в значении "истина"
 false # Bool в значении "ложь"
 ```
