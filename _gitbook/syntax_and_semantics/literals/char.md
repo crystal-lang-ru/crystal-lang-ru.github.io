@@ -1,9 +1,9 @@
 # Char
 
-A [Char](http://crystal-lang.org/api/Char.html) represents a [Unicode](http://en.wikipedia.org/wiki/Unicode) [code point](http://en.wikipedia.org/wiki/Code_point).
-It occupies 32 bits.
+[Char](http://crystal-lang.org/api/Char.html) представляет собой [Unicode](http://en.wikipedia.org/wiki/Unicode) [code point](http://en.wikipedia.org/wiki/Code_point).
+Занимает в памяти 32 бита.
 
-It is created by enclosing an UTF-8 character in single quotes.
+Экземпляр класса представляется как UTF-8 символ, окруженный одинарными кавычками:
 
 ```crystal
 'a'
@@ -13,35 +13,35 @@ It is created by enclosing an UTF-8 character in single quotes.
 'あ'
 ```
 
-You can use a backslash to denote some characters:
+Вы можете использовать обратный слеш, чтобы обозначить специальные символы:
 
 ```crystal
-'\'' # single quote
-'\\' # backslash
-'\e' # escape
-'\f' # form feed
-'\n' # newline
-'\r' # carriage return
-'\t' # tab
-'\v' # vertical tab
+'\'' # одинарная кавычка
+'\\' # обратный слеш
+'\e' # управляющая последовательность
+'\f' # смена страницы
+'\n' # новая строка
+'\r' # возврат каретки
+'\t' # табуляция
+'\v' # вертикальная табуляция
 ```
 
-You can use a backslash followed by at most three digits to denote a code point written in octal:
+Вы можете использовать обратный слеш и до трех цифр после него для обозначения символов в восьмеричной системе счисления:
 
 ```crystal
 '\101' # == 'A'
 '\123' # == 'S'
 '\12'  # == '\n'
-'\1'   # code point 1
+'\1'   # точка кода 1
 ```
 
-You can use a backslash followed by an *u* and four hexadecimal characters to denote a unicode codepoint written:
+Вы можете использовать обратный слеш, *u* и четыре шестнадцатеричных символа для обозначения Unicode-последовательности:
 
 ```crystal
 '\u0041' # == 'A'
 ```
 
-Or you can use curly braces and specify up to six hexadecimal numbers (0 to 10FFFF):
+Или вы можете использовать фигурные скобки и шесть шестнадцатеричных символов:
 
 ```crystal
 '\u{41}'    # == 'A'
