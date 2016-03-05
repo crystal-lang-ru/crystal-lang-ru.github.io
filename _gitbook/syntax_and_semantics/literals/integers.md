@@ -1,13 +1,10 @@
-# Integers
+# Целые числа
 
-There are four signed integer types: [Int8](http://crystal-lang.org/api/Int8.html), [Int16](http://crystal-lang.org/api/Int16.html), [Int32](http://crystal-lang.org/api/Int32.html) and [Int64](http://crystal-lang.org/api/Int64.html), being able to represent numbers of 8, 16, 32 and 64 bits respectively.
+Есть четыре знаковых целочисленных типа: [Int8](http://crystal-lang.org/api/Int8.html), [Int16](http://crystal-lang.org/api/Int16.html), [Int32](http://crystal-lang.org/api/Int32.html) и [Int64](http://crystal-lang.org/api/Int64.html), представляющие 8, 16, 32, 64-битные числа соответственно.
 
-There are four unsigned integer types: [UInt8](http://crystal-lang.org/api/UInt8.html), [UInt16](http://crystal-lang.org/api/UInt16.html), [UInt32](http://crystal-lang.org/api/UInt32.html) and [UInt64](http://crystal-lang.org/api/UInt64.html).
+А также четыре беззнаковых целочисленных типа: [UInt8](http://crystal-lang.org/api/UInt8.html), [UInt16](http://crystal-lang.org/api/UInt16.html), [UInt32](http://crystal-lang.org/api/UInt32.html) и [UInt64](http://crystal-lang.org/api/UInt64.html).
 
-An integer literal is an optional `+` or `-` sign, followed by
-a sequence of digits and underscores, optionally followed by a suffix.
-If no suffix is present, the literal's type is the lowest between `Int32`, `Int64` and `UInt64`
-in which the number fits:
+Целочисленный литерал, это необязательный знак `+` или `-`, затем последовательность чисел и символов подчеркивания, с необязательным суффиксом типа. Если суффикс отсутствует, тип по умолчанию выбирается из наиболее подходящих к числу типов: `Int32`, `Int64` и `UInt64`:
 
 ```crystal
 1      # Int32
@@ -29,27 +26,27 @@ in which the number fits:
 9223372036854775808 # UInt64
 ```
 
-The underscore `_` before the suffix is optional.
+Нижнее подчеркивание `_` перед суффиксом необязательно.
 
-Underscores can be used to make some numbers more readable:
+Подчеркивания используются для того, чтобы сделать числа удобными для чтения:
 
 ```crystal
-1_000_000 # better than 1000000
+1_000_000 # лучше чем 1000000
 ```
 
-Binary numbers start with `0b`:
+Двоичные числа начинаются с `0b`:
 
 ```crystal
 0b1101 # == 13
 ```
 
-Octal numbers start with a `0o`:
+Восьмеричные числа начинаются с `0o`:
 
 ```crystal
 0o123 # == 83
 ```
 
-Hexadecimal numbers start with `0x`:
+Шестнадцатеричные числа начинаются с `0x`:
 
 ```crystal
 0xFE012D # == 16646445
