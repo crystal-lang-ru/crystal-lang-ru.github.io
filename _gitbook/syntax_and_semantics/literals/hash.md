@@ -1,46 +1,46 @@
 # Hash
 
-A [Hash](http://crystal-lang.org/api/Hash.html) representing a mapping of keys of a type `K` to values of a type `V`. It is typically created with a hash literal:
+[Hash](http://crystal-lang.org/api/Hash.html) (хэш) представляет собой структуру данных, отображающую ключи типа `K` в значения типа `V`. Обычно создается с помощью литерала хэша:
 
 ```crystal
 {1 => 2, 3 => 4}     # Hash(Int32, Int32)
 {1 => 2, 'a' => 3}   # Hash(Int32 | Char, Int32)
 ```
 
-A Hash can have mixed types, both for the keys and values, meaning `K`/`V` will be union types, but these are determined when the hash is created, either by specifying `K` and `V` or by using a hash literal. In the latter case, `K` will be set to the union of the hash literal keys, and `V` will be set to the union of the hash literal values.
+Hash может иметь смешанные типы для ключей и значений. Это означает, что `K` или `V` будет объединением типов. Они определяются при создании хэша: либо при явном определении `K` и `V`, либо при использовании литерала хэша. В последнем случае `K` будет определен объединением ключей литерала хэша, а `V` - значений литерала хэша.
 
-When creating an empty hash you must always specify `K` and `V`:
+При создании пустого хэша необходимо явно определить `K` и `V`:
 
 ```crystal
-{} of Int32 => Int32 # same as Hash(Int32, Int32).new
-{}                   # syntax error
+{} of Int32 => Int32 # то же, что и Hash(Int32, Int32).new
+{}                   # синтаксическая ошибка
 ```
 
-## Symbol keys
+## Символьные ключи
 
-A special notation allows creating hashes with symbol keys:
+Специальная нотация разрешает создание хэша с символьными ключами:
 
 ```crystal
 {key1: 'a', key2: 'b'} # Hash(Symbol, Char)
 ```
 
-## String keys
+## Строковые ключи
 
-A special notation allows creating hashes with string keys:
+Специальная нотация разрешает создание хэша со строковыми ключами:
 
 ```crystal
 {"key1": 'a', "key2": 'b'} # Hash(String, Char)
 ```
 
-## Hash-like types
+## Hash-подобные типы
 
-You can use a special hash literal syntax with other types too, as long as they define an argless `new` method and a `[]=` method:
+Вы можете использовать специальный синтаксис литерала хэша также с другими типами, до тех пор, пока у них определены методы `new` (без аргументов) и `[]=`:
 
 ```crystal
 MyType{"foo": "bar"}
 ```
 
-If `MyType` is not generic, the above is equivalent to this:
+Если `MyType` не универсальный тип, то запись выше эквивалентна этой записи:
 
 ```crystal
 tmp = MyType.new
@@ -48,7 +48,7 @@ tmp["foo"] = "bar"
 tmp
 ```
 
-If `MyType` is generic, the above is equivalent to this:
+Если тип `MyType` универсальный, то эквивалентна этой записи:
 
 ```crystal
 tmp = MyType(typeof("foo"), typeof("bar")).new
@@ -56,7 +56,7 @@ tmp["foo"] = "bar"
 tmp
 ```
 
-In the case of a generic type, the type arguments can be specified too:
+В случае универсального типа, типы аргументов также могут быть определены:
 
 ```crystal
 MyType(String, String) {"foo": "bar"}
