@@ -1,14 +1,13 @@
 # Array
 
-[Array](http://crystal-lang.org/api/Array.html) (Массив) это универсальная структура данных, содержащая элементы типа `T`. Обычно создается с помощью литералов массива:
+[Array](http://crystal-lang.org/api/Array.html) (массив) это универсальная структура данных, содержащая элементы типа `T`. Обычно создается с помощью литералов массива:
 
 ```crystal
 [1, 2, 3]         # Array(Int32)
 [1, "hello", 'x'] # Array(Int32 | String | Char)
 ```
 
-An Array can have mixed types, meaning `T` will be a union of types, but these are determined when the array is created, either by specifying T or by using an array literal. In the latter case, T will be set to the union of the array literal elements.
-Массив может иметь смешанный тип, это значит, что `T` будет являться объединением типов, и они будут вычисляться при создании массива, либо при явном определении `T`, либо используя литерал массива. В последнем случае T будет определено как литералов массива.
+Массив может иметь смешанный тип, это значит, что `T` будет являться объединением типов, и они будут вычисляться при создании массива: либо при явном определении `T`, либо используя литерал массива. В последнем случае T будет определено с помощью дополнительного элемента литерала массива.
 
 При создании пустого массива мы всегда должны определить T:
 
@@ -33,9 +32,8 @@ An Array can have mixed types, meaning `T` will be a union of types, but these a
 %i(one two three) # [:one, :two, :three]
 ```
 
-## Array-like types Array-подобные типы
+## Array-подобные типы
 
-You can use a special array literal syntax with other types too, as long as they define an argless `new` method and a `<<` method:
 Вы можете использовать синтаксис литералов массива вместе с другими типами, если у них определены методы `new` (без аргументов) и `<<`:
 
 ```crystal
