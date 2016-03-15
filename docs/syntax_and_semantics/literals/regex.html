@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.2.11" data-basepath="../.." data-revision="Sun Feb 21 2016 00:53:43 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.2.11" data-basepath="../.." data-revision="Tue Mar 15 2016 22:07:09 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP сервер
+                        HTTP Server
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Синтаксис и семантика
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Комментарии
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Литералы
                     </a>
             
             
@@ -1996,26 +1996,26 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="regex">Regex</h1>
-<p>Regular expressions are represented by the <a href="http://crystal-lang.org/api/Regex.html" target="_blank">Regex</a> class, which is usually created with a literal:</p>
+<p>&#x420;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x44B;&#x435; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x44B; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x43E;&#x43C; <a href="http://crystal-lang.org/api/Regex.html" target="_blank">Regex</a>, &#x44D;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x433;&#x43E; &#x441;&#x43E;&#x437;&#x434;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x441; &#x43F;&#x43E;&#x43C;&#x43E;&#x449;&#x44C;&#x44E; &#x43B;&#x438;&#x442;&#x435;&#x440;&#x430;&#x43B;&#x43E;&#x432; &#x440;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F;:</p>
 <pre><code class="lang-crystal">foo_or_bar = <span class="hljs-regexp">/foo|bar/</span>
 heeello    = <span class="hljs-regexp">/h(e+)llo/</span>
 integer    = <span class="hljs-regexp">/\d+/</span>
 </code></pre>
-<p>A regular expression literal is delimited by <code>/</code> and uses <a href="http://pcre.org/pcre.txt" target="_blank">PCRE</a> syntax.</p>
-<p>It can be followed by these modifiers:</p>
+<p>&#x41B;&#x438;&#x442;&#x435;&#x440;&#x430;&#x43B; &#x440;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x44D;&#x442;&#x43E; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B; <code>/</code> &#x438; &#x43E;&#x43D; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442; <a href="http://pcre.org/pcre.txt" target="_blank">PCRE</a> &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;.</p>
+<p>&#x417;&#x430; &#x43D;&#x438;&#x43C; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x441;&#x43B;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x441;&#x43B;&#x435;&#x434;&#x443;&#x44E;&#x449;&#x438;&#x435; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x438;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x44B;:</p>
 <ul>
-<li>i: ignore case (PCRE_CASELESS)</li>
-<li>m: multiline (PCRE_MULTILINE)</li>
-<li>x: extended (PCRE_EXTENDED)</li>
+<li>i: &#x438;&#x433;&#x43D;&#x43E;&#x440;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x440;&#x435;&#x433;&#x438;&#x441;&#x442;&#x440; (PCRE_CASELESS)</li>
+<li>m: &#x43C;&#x43D;&#x43E;&#x433;&#x43E;&#x441;&#x442;&#x440;&#x43E;&#x447;&#x43D;&#x44B;&#x439; (PCRE_MULTILINE)</li>
+<li>x: &#x440;&#x430;&#x441;&#x448;&#x438;&#x440;&#x435;&#x43D;&#x43D;&#x44B;&#x439; (PCRE_EXTENDED)</li>
 </ul>
-<p>For example</p>
+<p>&#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;</p>
 <pre><code class="lang-crystal">r = <span class="hljs-regexp">/foo/imx</span>
 </code></pre>
-<p>Slashes must be escaped:</p>
+<p>&#x421;&#x43B;&#x435;&#x448;&#x44B; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x431;&#x44B;&#x442;&#x44C; &#x44D;&#x43A;&#x440;&#x430;&#x43D;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x44B;:</p>
 <pre><code class="lang-crystal">slash = <span class="hljs-regexp">/\//</span>
 </code></pre>
-<p>An alternative syntax is provided:</p>
-<pre><code class="lang-crystal">r = <span class="hljs-variable">%r</span>(regex <span class="hljs-keyword">with</span> <span class="hljs-symbol">slash:</span> /)
+<p>&#x422;&#x430;&#x43A;&#x436;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x435;&#x43D; &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x43D;&#x44B;&#x439; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441;:</p>
+<pre><code class="lang-crystal">r = <span class="hljs-variable">%r</span>(&#x440;&#x435;&#x433;&#x443;&#x43B;&#x44F;&#x440;&#x43D;&#x43E;&#x435; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; &#x441;&#x43E; &#x441;&#x43B;&#x435;&#x448;&#x435;&#x43C;<span class="hljs-symbol">:</span> /)
 </code></pre>
 
                     

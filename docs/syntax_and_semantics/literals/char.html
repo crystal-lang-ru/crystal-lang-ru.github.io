@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.2.5" data-basepath="../.." data-revision="Sun Feb 21 2016 00:53:43 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.2.5" data-basepath="../.." data-revision="Tue Mar 15 2016 22:07:09 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -232,7 +232,7 @@
                         
                             <b>3.2.</b>
                         
-                        HTTP сервер
+                        HTTP Server
                     </a>
             
             
@@ -252,7 +252,7 @@
                         
                             <b>4.</b>
                         
-                        Syntax and semantics
+                        Синтаксис и семантика
                     </a>
             
             
@@ -268,7 +268,7 @@
                         
                             <b>4.1.</b>
                         
-                        Comments
+                        Комментарии
                     </a>
             
             
@@ -283,7 +283,7 @@
                         
                             <b>4.2.</b>
                         
-                        Literals
+                        Литералы
                     </a>
             
             
@@ -1996,35 +1996,35 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="char">Char</h1>
-<p>A <a href="http://crystal-lang.org/api/Char.html" target="_blank">Char</a> represents a <a href="http://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> <a href="http://en.wikipedia.org/wiki/Code_point" target="_blank">code point</a>.
-It occupies 32 bits.</p>
-<p>It is created by enclosing an UTF-8 character in single quotes.</p>
+<p><a href="http://crystal-lang.org/api/Char.html" target="_blank">Char</a> &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x441;&#x43E;&#x431;&#x43E;&#x439; <a href="http://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a> <a href="http://en.wikipedia.org/wiki/Code_point" target="_blank">code point</a>.
+&#x417;&#x430;&#x43D;&#x438;&#x43C;&#x430;&#x435;&#x442; &#x432; &#x43F;&#x430;&#x43C;&#x44F;&#x442;&#x438; 32 &#x431;&#x438;&#x442;&#x430;.</p>
+<p>&#x42D;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x43F;&#x440;&#x435;&#x434;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x43A;&#x430;&#x43A; UTF-8 &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;, &#x43E;&#x43A;&#x440;&#x443;&#x436;&#x435;&#x43D;&#x43D;&#x44B;&#x439; &#x43E;&#x434;&#x438;&#x43D;&#x430;&#x440;&#x43D;&#x44B;&#x43C;&#x438; &#x43A;&#x430;&#x432;&#x44B;&#x447;&#x43A;&#x430;&#x43C;&#x438;:</p>
 <pre><code class="lang-crystal"><span class="hljs-string">&apos;a&apos;</span>
 <span class="hljs-string">&apos;z&apos;</span>
 <span class="hljs-string">&apos;0&apos;</span>
 <span class="hljs-string">&apos;_&apos;</span>
 <span class="hljs-string">&apos;&#x3042;&apos;</span>
 </code></pre>
-<p>You can use a backslash to denote some characters:</p>
-<pre><code class="lang-crystal"><span class="hljs-string">&apos;\&apos;&apos;</span> <span class="hljs-comment"># single quote</span>
-<span class="hljs-string">&apos;\\&apos;</span> <span class="hljs-comment"># backslash</span>
-<span class="hljs-string">&apos;\e&apos;</span> <span class="hljs-comment"># escape</span>
-<span class="hljs-string">&apos;\f&apos;</span> <span class="hljs-comment"># form feed</span>
-<span class="hljs-string">&apos;\n&apos;</span> <span class="hljs-comment"># newline</span>
-<span class="hljs-string">&apos;\r&apos;</span> <span class="hljs-comment"># carriage return</span>
-<span class="hljs-string">&apos;\t&apos;</span> <span class="hljs-comment"># tab</span>
-<span class="hljs-string">&apos;\v&apos;</span> <span class="hljs-comment"># vertical tab</span>
+<p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x441;&#x43B;&#x435;&#x448;, &#x447;&#x442;&#x43E;&#x431;&#x44B; &#x43E;&#x431;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x438;&#x442;&#x44C; &#x441;&#x43F;&#x435;&#x446;&#x438;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x435; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x44B;:</p>
+<pre><code class="lang-crystal"><span class="hljs-string">&apos;\&apos;&apos;</span> <span class="hljs-comment"># &#x43E;&#x434;&#x438;&#x43D;&#x430;&#x440;&#x43D;&#x430;&#x44F; &#x43A;&#x430;&#x432;&#x44B;&#x447;&#x43A;&#x430;</span>
+<span class="hljs-string">&apos;\\&apos;</span> <span class="hljs-comment"># &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x441;&#x43B;&#x435;&#x448;</span>
+<span class="hljs-string">&apos;\e&apos;</span> <span class="hljs-comment"># &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x430;&#x44F; &#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x44C;</span>
+<span class="hljs-string">&apos;\f&apos;</span> <span class="hljs-comment"># &#x441;&#x43C;&#x435;&#x43D;&#x430; &#x441;&#x442;&#x440;&#x430;&#x43D;&#x438;&#x446;&#x44B;</span>
+<span class="hljs-string">&apos;\n&apos;</span> <span class="hljs-comment"># &#x43D;&#x43E;&#x432;&#x430;&#x44F; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x430;</span>
+<span class="hljs-string">&apos;\r&apos;</span> <span class="hljs-comment"># &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x442; &#x43A;&#x430;&#x440;&#x435;&#x442;&#x43A;&#x438;</span>
+<span class="hljs-string">&apos;\t&apos;</span> <span class="hljs-comment"># &#x442;&#x430;&#x431;&#x443;&#x43B;&#x44F;&#x446;&#x438;&#x44F;</span>
+<span class="hljs-string">&apos;\v&apos;</span> <span class="hljs-comment"># &#x432;&#x435;&#x440;&#x442;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x430;&#x44F; &#x442;&#x430;&#x431;&#x443;&#x43B;&#x44F;&#x446;&#x438;&#x44F;</span>
 </code></pre>
-<p>You can use a backslash followed by at most three digits to denote a code point written in octal:</p>
+<p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x441;&#x43B;&#x435;&#x448; &#x438; &#x434;&#x43E; &#x442;&#x440;&#x435;&#x445; &#x446;&#x438;&#x444;&#x440; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x43D;&#x435;&#x433;&#x43E; &#x434;&#x43B;&#x44F; &#x43E;&#x431;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x43E;&#x432; &#x432; &#x432;&#x43E;&#x441;&#x44C;&#x43C;&#x435;&#x440;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x441;&#x438;&#x441;&#x442;&#x435;&#x43C;&#x435; &#x441;&#x447;&#x438;&#x441;&#x43B;&#x435;&#x43D;&#x438;&#x44F;:</p>
 <pre><code class="lang-crystal"><span class="hljs-string">&apos;\101&apos;</span> <span class="hljs-comment"># == &apos;A&apos;</span>
 <span class="hljs-string">&apos;\123&apos;</span> <span class="hljs-comment"># == &apos;S&apos;</span>
 <span class="hljs-string">&apos;\12&apos;</span>  <span class="hljs-comment"># == &apos;\n&apos;</span>
-<span class="hljs-string">&apos;\1&apos;</span>   <span class="hljs-comment"># code point 1</span>
+<span class="hljs-string">&apos;\1&apos;</span>   <span class="hljs-comment"># &#x442;&#x43E;&#x447;&#x43A;&#x430; &#x43A;&#x43E;&#x434;&#x430; 1</span>
 </code></pre>
-<p>You can use a backslash followed by an <em>u</em> and four hexadecimal characters to denote a unicode codepoint written:</p>
+<p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x43E;&#x431;&#x440;&#x430;&#x442;&#x43D;&#x44B;&#x439; &#x441;&#x43B;&#x435;&#x448;, <em>u</em> &#x438; &#x447;&#x435;&#x442;&#x44B;&#x440;&#x435; &#x448;&#x435;&#x441;&#x442;&#x43D;&#x430;&#x434;&#x446;&#x430;&#x442;&#x435;&#x440;&#x438;&#x447;&#x43D;&#x44B;&#x445; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x430; &#x434;&#x43B;&#x44F; &#x43E;&#x431;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; Unicode-&#x43F;&#x43E;&#x441;&#x43B;&#x435;&#x434;&#x43E;&#x432;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;&#x441;&#x442;&#x438;:</p>
 <pre><code class="lang-crystal"><span class="hljs-string">&apos;\u0041&apos;</span> <span class="hljs-comment"># == &apos;A&apos;</span>
 </code></pre>
-<p>Or you can use curly braces and specify up to six hexadecimal numbers (0 to 10FFFF):</p>
+<p>&#x418;&#x43B;&#x438; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x444;&#x438;&#x433;&#x443;&#x440;&#x43D;&#x44B;&#x435; &#x441;&#x43A;&#x43E;&#x431;&#x43A;&#x438; &#x438; &#x448;&#x435;&#x441;&#x442;&#x44C; &#x448;&#x435;&#x441;&#x442;&#x43D;&#x430;&#x434;&#x446;&#x430;&#x442;&#x435;&#x440;&#x438;&#x447;&#x43D;&#x44B;&#x445; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x43E;&#x432;:</p>
 <pre><code class="lang-crystal"><span class="hljs-string">&apos;\u{41}&apos;</span>    <span class="hljs-comment"># == &apos;A&apos;</span>
 <span class="hljs-string">&apos;\u{1F52E}&apos;</span> <span class="hljs-comment"># == &apos;&#x1F52E;&apos;</span>
 </code></pre>
