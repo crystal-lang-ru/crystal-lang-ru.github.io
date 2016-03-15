@@ -1,3 +1,3 @@
-# Syntax and Semantics
+# Синтаксис и семантика
 
-The program’s source code must be encoded in UTF-8.
+Программный код должен быть в кодировке UTF-8.
