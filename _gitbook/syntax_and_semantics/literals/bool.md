@@ -1,9 +1,9 @@
 # Bool
 
-[Bool](http://crystal-lang.org/api/Bool.html) has only two possible values: `true` and `false`. They are constructed using these literals:
+[Bool](http://crystal-lang.org/api/Bool.html) имеет два значения: `истина` и `ложь`. Они выражаются через литералы `true` и `false`:
 
 
 ```crystal
-true  # A Bool that is true
-false # A Bool that is false
+true  # Bool в значении "истина"
+false # Bool в значении "ложь"
 ```

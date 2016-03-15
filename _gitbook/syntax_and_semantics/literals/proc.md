@@ -1,42 +1,42 @@
 # Proc
 
-A [Proc](http://crystal-lang.org/api/Proc.html) represents a function pointer with an optional context (the closure data). It is typically created with a proc literal:
+[Proc](http://crystal-lang.org/api/Proc.html) (процедурв) представляет собой указатель на функцию с дополнительный контекстом (данные замыкания). Обычно создается с помощью специального литерала:
 
 ```crystal
-# A proc without arguments
+# процедура без аргументов:
 ->{ 1 } # Proc(Int32)
 
-# A proc with one argument
+# процедура с одним аргументом:
 ->(x : Int32) { x.to_s } # Proc(Int32, String)
 
-# A proc with two arguments:
+# процедура с двумя аргументами:
 ->(x : Int32, y : Int32) { x + y } # Proc(Int32, Int32, Int32)
 ```
 
-The types of the arguments are mandatory, except when directly sending a proc literal to a lib `fun` in C bindings.
+Типы аргументов являются обязательными, за исключением случаев, когда литерал процедуры напрямую передается в lib `fun` для вызова функций из языка С.
 
-The return type is inferred from the proc's body.
+Возвращаемый тип определяется из тела процедуры.
 
-A special `new` method is provided too:
+Предоставляется специальный метод `new`:
 
 ```crystal
 Proc(Int32, String).new { |x| x.to_s } # Proc(Int32, String)
 ```
 
-This form allows you to specify the return type and to check it against the proc's body.
+Эта форма позволяет явно определять тип возвращаемого значения и сравнивать его с возвращаемым типом процедуры.
 
-## Invoking
+## Вызов
 
-To invoke a Proc, you invoke the `call` method on it. The number of arguments must match the proc's type:
+Чтобы вызвать Proc, просто выполните метод `call`. Число аргументов должно соответствовать явно определенным аргументам процедуры:
 
 ```crystal
 proc = ->(x : Int32, y : Int32) { x + y }
 proc.call(1, 2) #=> 3
 ```
 
-## From methods
+## Из метода
 
-A Proc can be created from an existing method:
+Proc может быть создан из существующего метода:
 
 ```crystal
 def one
@@ -47,7 +47,7 @@ proc = ->one
 proc.call #=> 1
 ```
 
-If the method has arguments, you must specify their types:
+Если метод имеет аргументы, то необходимо явно указать их типы:
 
 ```crystal
 def plus_one(x)
@@ -58,7 +58,7 @@ proc = ->plus_one(Int32)
 proc.call(41) #=> 42
 ```
 
-A proc can optionally specify a receiver:
+Процедуре можно также явно указать объект:
 
 ```crystal
 str = "hello"

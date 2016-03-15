@@ -1,95 +1,92 @@
 # String
 
-A [String](http://crystal-lang.org/api/String.html) represents an immutable sequence of UTF-8 characters.
+[String](http://crystal-lang.org/api/String.html) представляет неизменяемую последовательность символов в кодировке UTF-8.
 
-A String is typically created with a string literal, enclosing UTF-8 characters in double quotes:
+String обычно создается с помощью строкового литерала, заключая UTF-8 символы в двойные кавычки:
 
 ```crystal
 "hello world"
 ```
 
-A backslash can be used to denote some characters inside the string:
+Обратный слеш может быть использован для обозначения специальных символов:
 
 ```crystal
-"\"" # double quote
-"\\" # backslash
-"\e" # escape
-"\f" # form feed
-"\n" # newline
-"\r" # carriage return
-"\t" # tab
-"\v" # vertical tab
+"\"" # двойная кавычка
+"\\" # обратный слеш
+"\e" # управляющая последовательность
+"\f" # смена страницы
+"\n" # новая строка
+"\r" # возврат каретки
+"\t" # табуляция
+"\v" # вертикальная табуляция
 ```
 
-You can use a backslash followed by at most three digits to denote a code point written in octal:
+Вы можете использовать обратный слеш и до трех цифр после него для обозначения символов в восьмеричной системе счисления:
 
 ```crystal
 "\101" # == "A"
 "\123" # == "S"
 "\12"  # == "\n"
-"\1"   # string with one character with code point 1
+"\1"   # code point 1
 ```
 
-You can use a backslash followed by an *u* and four hexadecimal characters to denote a unicode codepoint written:
+Вы можете использовать обратный слеш, *u* и четыре шестнадцатеричных символа для обозначения Unicode-последовательности:
 
 ```crystal
 "\u0041" # == "A"
 ```
 
-Or you can use curly braces and specify up to six hexadecimal numbers (0 to 10FFFF):
+Или вы можете использовать фигурные скобки и шесть шестнадцатеричных символов (от 0 до 10FFFF):
 
 ```crystal
 "\u{41}"    # == "A"
 "\u{1F52E}" # == "🔮"
 ```
 
-A string can span multiple lines:
+Строка может занимать несколько строк кода:
 
 ```crystal
 "hello
-      world" # same as "hello\n      world"
+      world" # то же, что и "hello\n      world"
 ```
 
-Note that in the above example trailing and leading spaces, as well as newlines,
-end up in the resulting string. To avoid this, you can split a string into multiple lines
-by joining multiple literals with a backslash:
+Обратите внимание, что в последнем примере в результирующей строке содержатся пробелы и переводы строк. Чтобы избежать этого, разбейте исходную строку на несколько строк, объединяя их обратным слешем:
 
 ```crystal
 "hello " \
 "world, " \
-"no newlines" # same as "hello world, no newlines"
+"no newlines" # то же, что и "hello world, no newlines"
 ```
 
-Alternatively, a backlash followed by a newline can be inserted inside the string literal:
+Или вы можете вставлять обратныый слеш в качестве перевода строки во внутрь строкового литерала:
 
 ```crystal
 "hello \
      world, \
-     no newlines" # same as "hello world, no newlines"
+     no newlines" # то же, что и "hello world, no newlines"
 ```
 
-In this case, leading whitespace is not included in the resulting string.
+В этом случае, пробелы в начале строки не попадут в результирующую строку.
 
-If you need to write a string that has many double quotes, parenthesis, or similar
-characters, you can use alternative literals:
+Если вам нужно написать строку, имеющую много двойных кавычек, скобок и тому подобных символов, то вы можете использовать альтернативные литералы:
 
 ```crystal
-# Supports double quotes and nested parenthesis
-%(hello ("world")) # same as "hello (\"world\")"
+# Поддерживает двойные кавычки и вложенные круглые скобки
+%(hello ("world")) # то же, что и "hello (\"world\")"
 
-# Supports double quotes and nested brackets
-%[hello ["world"]] # same as "hello [\"world\"]"
+# Поддерживает двойные кавычки и вложенные квадратные скобки
+%[hello ["world"]] # то же, что и "hello [\"world\"]"
 
-# Supports double quotes and nested curlies
-%{hello {"world"}} # same as "hello {\"world\"}"
+# Поддерживает двойные кавычки и вложенные фигурные скобки
+%{hello {"world"}} # то же, что и "hello {\"world\"}"
 
-# Supports double quotes and nested angles
-%<hello <"world">> # same as "hello <\"world\">"
+# Поддерживает двойные кавычки и вложенные треугольные скобки
+%<hello <"world">> # то же, что и "hello <\"world\">"
 ```
 
 ## Heredoc
 
-You can also use a "heredoc" for creating string:
+Вы можете использовать специальный "heredoc" синтаксис для создания строки:
 
 ```crystal
 <<-XML
@@ -99,27 +96,27 @@ You can also use a "heredoc" for creating string:
 XML
 ```
 
-A "heredoc" is written with `<<-IDENT`, where `IDENT` is an identifier, a sequence of letters and numbers that must start with a letter. The "heredoc" finishes in the line that starts with `IDENT`, ignoring leading whitespace.
+"Heredoc" начинается с `<<-IDENT`, где `IDENT` - это идентификатор, последовательность букв и цифр, которая должна начинаться с буквы. "heredoc" заканчивается в строке, которая начинается с `IDENT`, игнорируя пробелы в начале этой строки.
 
-Leading whitespace is removing from the heredoc contents according to the number of whitespace that this last `IDENT` has. For example:
+Пробелы в начале строки удаляются из контента "heredoc" в соответствии с количеством пробельных символов, которые имеет последний `IDENT`. Например:
 
 ```crystal
-# Same as "Hello\n  world"
+# то же, что и "Hello\n  world"
 <<-STRING
   Hello
     world
   STRING
 
-# Same as "  Hello\n    world"
+# то же, что и "  Hello\n    world"
 <<-STRING
     Hello
       world
   STRING
 ```
 
-## Interpolation
+## Интерполяция
 
-To create a String with embedded expressions, you can use string interpolation:
+Для создания строки со встроенными выражениями, вы можете использовать интерполяцию:
 
 ```crystal
 a = 1
@@ -127,4 +124,4 @@ b = 2
 "sum = #{a + b}"        # "sum = 3"
 ```
 
-This ends up invoking `Object#to_s(IO)` on each expression enclosed by `#{...}`.
+Вызывается метод `Object#to_s(IO)` на каждом выражении внутри `#{...}`.
