@@ -28,7 +28,7 @@
        * [Regex](syntax_and_semantics/literals/regex.md)
        * [Tuple](syntax_and_semantics/literals/tuple.md)
        * [Proc](syntax_and_semantics/literals/proc.md)
-   * [Local variables](syntax_and_semantics/local_variables.md)
+   * [Локальные переменные](syntax_and_semantics/local_variables.md)
    * [Global variables](syntax_and_semantics/global_variables.md)
    * [Assignment](syntax_and_semantics/assignment.md)
        * [Multiple assignment](syntax_and_semantics/multiple_assignment.md)

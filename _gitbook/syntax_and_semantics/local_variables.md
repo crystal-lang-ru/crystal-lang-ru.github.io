@@ -1,22 +1,22 @@
-# Local variables
+# Локальные переменные
 
-Local variables start with lowercase letters. They are declared when you first assign them a value.
+Локальные переменные начинаются с букв в нижнем регистре. Они объявляются в момент присваивания им значений.
 
 ```crystal
 name = "Crystal"
 age = 1
 ```
 
-Their type is inferred from their usage, not only from their initializer. In general, they are just value holders associated with the type that the programmer expects them to have according to their location and usage on the program.
+Их тип определяется не тольки при инициализации, но также из контекста использования. В общем, в них хранятся значения тех типов, которые подразумевает программист, исходя из их местоположения и использования в программе.
 
-For example, reassigning a variable with a different expression makes it have that expression’s type:
+Например, присваивание переменной другого выражения присваивает также и тип этого выражения:
 
 ```crystal
 flower = "Tulip"
-# At this point 'flower' is a String
+# переменная 'flower' имеет тип String
 
 flower = 1
-# At this point 'flower' is an Int32
+# переменная 'flower' имеет тип Int32
 ```
 
-Underscores are allowed at the beginning of a variable name, but these names are reserved for the compiler, so their use is not recommended (and it also makes the code uglier to read).
+Нижнее подчеркивание можно использовать в начале имени переменной, но некоторые подобные имена зарезервированы компилятором и их использование не рекомендуется (также они делают код менее удобным для чтения).
