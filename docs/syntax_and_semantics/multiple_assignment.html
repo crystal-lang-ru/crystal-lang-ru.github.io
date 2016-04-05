@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.5.1" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.5.1" data-basepath=".." data-revision="Wed Apr 06 2016 01:36:46 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1995,51 +1995,51 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="multiple-assignment">Multiple assignment</h1>
-<p>You can declare/assign multiple variables at the same time by separating expressions with a comma (<code>,</code>):</p>
+                        <h1 id="%D0%BC%D0%BD%D0%BE%D0%B6%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%B8%D1%81%D0%B2%D0%B0%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">&#x41C;&#x43D;&#x43E;&#x436;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x430;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435;</h1>
+<p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43E;&#x431;&#x44A;&#x44F;&#x432;&#x438;&#x442;&#x44C; &#x43D;&#x435;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x43E;&#x434;&#x43D;&#x43E;&#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;, &#x440;&#x430;&#x437;&#x434;&#x435;&#x43B;&#x44F;&#x44F; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x437;&#x430;&#x43F;&#x44F;&#x442;&#x43E;&#x439; (<code>,</code>):</p>
 <pre><code class="lang-crystal">name, age = <span class="hljs-string">&quot;Crystal&quot;</span>, <span class="hljs-number">1</span>
 
-<span class="hljs-comment"># The above is the same as this:</span>
+<span class="hljs-comment"># &#x442;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 temp1 = <span class="hljs-string">&quot;Crystal&quot;</span>
 temp2 = <span class="hljs-number">1</span>
 name  = temp1
 age   = temp2
 </code></pre>
-<p>Note that because expressions are assigned to temporary variables it is possible to exchange variables&#x2019; contents in a single line:</p>
+<p>&#x41E;&#x431;&#x440;&#x430;&#x442;&#x438;&#x442;&#x435; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x43D;&#x438;&#x435;, &#x442;&#x430;&#x43A; &#x43A;&#x430;&#x43A; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x430;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x441;&#x44F; &#x432;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;, &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43E;&#x431;&#x43C;&#x435;&#x43D;&#x44F;&#x442;&#x44C; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x43E;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x432; &#x43E;&#x434;&#x43D;&#x443; &#x441;&#x442;&#x440;&#x43E;&#x43A;&#x443;:</p>
 <pre><code class="lang-crystal">a = <span class="hljs-number">1</span>
 b = <span class="hljs-number">2</span>
 a, b = b, a
 a <span class="hljs-comment">#=&gt; 2</span>
 b <span class="hljs-comment">#=&gt; 1</span>
 </code></pre>
-<p>If the right-hand side contains just one expression, it is considered an indexed type and the following syntax sugar applies:</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x43F;&#x440;&#x430;&#x432;&#x430;&#x44F; &#x447;&#x430;&#x441;&#x442;&#x44C; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x43E;&#x434;&#x43D;&#x43E; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435;, &#x442;&#x43E; &#x43E;&#x43D;&#x43E; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x438;&#x43D;&#x434;&#x435;&#x43A;&#x441;&#x43D;&#x44B;&#x43C;:</p>
 <pre><code class="lang-crystal">name, age, source = <span class="hljs-string">&quot;Crystal,1,github&quot;</span>.split(<span class="hljs-string">&quot;,&quot;</span>)
 
-<span class="hljs-comment"># The above is the same as this:</span>
+<span class="hljs-comment"># &#x442;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 temp = <span class="hljs-string">&quot;Crystal,1,github&quot;</span>.split(<span class="hljs-string">&quot;,&quot;</span>)
 name   = temp[<span class="hljs-number">0</span>]
 age    = temp[<span class="hljs-number">1</span>]
 source = temp[<span class="hljs-number">2</span>]
 </code></pre>
-<p>If the left-hand side contains just one variable, the right-hand side is considered an array:</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x43B;&#x435;&#x432;&#x430;&#x44F; &#x447;&#x430;&#x441;&#x442;&#x44C; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x43E;&#x434;&#x43D;&#x443; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x443;&#x44E;, &#x442;&#x43E; &#x43F;&#x440;&#x430;&#x432;&#x430;&#x44F; &#x447;&#x430;&#x441;&#x442;&#x44C; &#x431;&#x443;&#x434;&#x435;&#x442; &#x441;&#x447;&#x438;&#x442;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x43C;&#x430;&#x441;&#x441;&#x438;&#x432;&#x43E;&#x43C;:</p>
 <pre><code class="lang-crystal">names = <span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Peter&quot;</span>, <span class="hljs-string">&quot;Jack&quot;</span>
 
-<span class="hljs-comment"># The above is the same as:</span>
+<span class="hljs-comment"># &#x442;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 names = [<span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-string">&quot;Peter&quot;</span>, <span class="hljs-string">&quot;Jack&quot;</span>]
 </code></pre>
-<p>Multiple assignment is also available to methods that end with <code>=</code>:</p>
+<p>&#x41C;&#x43D;&#x43E;&#x436;&#x435;&#x441;&#x442;&#x432;&#x435;&#x43D;&#x43D;&#x43E;&#x435; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x430;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E; &#x434;&#x43B;&#x44F; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43E;&#x43A;&#x430;&#x43D;&#x447;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x441;&#x44F; &#x43D;&#x430; <code>=</code>:</p>
 <pre><code class="lang-crystal">person.name, person.age = <span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-number">32</span>
 
-<span class="hljs-comment"># Same as:</span>
+<span class="hljs-comment"># &#x442;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 temp1 = <span class="hljs-string">&quot;John&quot;</span>
 temp2 = <span class="hljs-number">32</span>
 person.name = temp1
 person.age = temp2
 </code></pre>
-<p>And it is also available to indexers (<code>[]=</code>):</p>
+<p>&#x410; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E; &#x438;&#x43D;&#x434;&#x435;&#x43A;&#x441;&#x43D;&#x44B;&#x43C; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F;&#x43C; (<code>[]=</code>):</p>
 <pre><code class="lang-crystal">objects[<span class="hljs-number">1</span>], objects[<span class="hljs-number">2</span>] = <span class="hljs-number">3</span>, <span class="hljs-number">4</span>
 
-<span class="hljs-comment"># Same as:</span>
+<span class="hljs-comment"># &#x442;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 temp1 = <span class="hljs-number">3</span>
 temp2 = <span class="hljs-number">4</span>
 objects[<span class="hljs-number">1</span>] = temp1
