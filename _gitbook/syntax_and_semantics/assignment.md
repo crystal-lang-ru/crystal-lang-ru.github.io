@@ -1,67 +1,67 @@
-# Assignment
+# Присваивание
 
-Assignment is done with the equal (`=`) character.
+Присваивание выполняется в помощью литерала присваивания (`=`).
 
 ```crystal
-# Assigns to a local variable
+# Присваивание локальной переменной
 local = 1
 
-# Assigns to an instance variable
+# Присваивание переменной объекта
 @instance = 2
 
-# Assigns to a class variable
+# Присваивание переменной класса
 @@class = 3
 
-# Assigns to a global variable
+# Присваивание глобальной переменной
 $global = 4
 ```
 
-Each of the above kinds of variables will be explained later on.
+Все эти типы переменных будут объяснены позже.
 
-Some syntax sugar that contains the `=` character is available:
+Также доступны другие операторы, содержащие в себе операцию присваивания `=` и являющиеся синтаксическим сахаром:
 
 ```crystal
-local += 1  # same as: local = local + 1
+local += 1  # то же, что и: local = local + 1
 
-# The above is valid with these operators:
+# выполняется также и для этих операторов:
 # +, -, *, /, %, |, &, ^, **, <<, >>
 
-local ||= 1 # same as: local || (local = 1)
-local &&= 1 # same as: local && (local = 1)
+local ||= 1 # то же, что и: local || (local = 1)
+local &&= 1 # то же, что и: local && (local = 1)
 ```
 
-A method invocation that ends with `=` has syntax sugar:
+Способ вызова, заканчивающийся литералом присваивания `=` также имеет синтаксический сахар:
 
 ```crystal
-# A setter
+# Сеттер
 person.name=("John")
 
-# The above can be written as:
+# что может быть записано так:
 person.name = "John"
 
-# An indexed assignment
+# присваивание элементу массива
 objects.[]=(2, 3)
 
-# The above can be written as:
+# аналогично этому:
 objects[2] = 3
 
-# Not assignment-related, but also syntax sugar:
+# не связано с присваиванием, но тоже синтаксический сахар:
 objects.[](2, 3)
 
-# The above can be written as:
+# то же, что и:
 objects[2, 3]
 ```
 
-The `=` operator syntax sugar is also available to setters and indexers. Note that `||` and `&&` use the `[]?` method to check for key prescence.
+Обратите внимание, что операторы `||` и `&&` используют метод `[]?` для проверки присутствия ключа.
 
 ```crystal
-person.age += 1        # same as: person.age = person.age + 1
+person.age += 1        # то же, что и: person.age = person.age + 1
 
-person.name ||= "John" # same as: person.name || (person.name = "John")
-person.name &&= "John" # same as: person.name && (person.name = "John")
+person.name ||= "John" # то же, что и: person.name || (person.name = "John")
+person.name &&= "John" # то же, что и: person.name && (person.name = "John")
 
-objects[1] += 2        # same as: objects[1] = objects[1] + 2
+objects[1] += 2        # то же, что и: objects[1] = objects[1] + 2
 
-objects[1] ||= 2       # same as: objects[1]? || (objects[1] = 2)
-objects[1] &&= 2       # same as: objects[1]? && (objects[1] = 2)
+objects[1] ||= 2       # то же, что и: objects[1]? || (objects[1] = 2)
+objects[1] &&= 2       # то же, что и: objects[1]? && (objects[1] = 2)
 ```
