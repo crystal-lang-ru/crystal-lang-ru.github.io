@@ -1,6 +1,6 @@
-# alias
+# Псевдонимы
 
-With `alias` you can give a type a different name:
+Используя 'alias' вы можете указать для типа другое имя:
 
 ```crystal
 alias PInt32 = Pointer(Int32)
@@ -8,9 +8,9 @@ alias PInt32 = Pointer(Int32)
 ptr = PInt32.malloc(1) # : Pointer(Int32)
 ```
 
-Every time you use an alias the compiler replaces it with the type it refers to.
+Каждый раз, когда вы используете псевдоним, компилятор заменяет его на тот тип, на который он ссылается.
 
-Aliases are useful to avoid writing long type names, but also to be able to talk about recursive types:
+Псевдонимы хороши для избежания слишком длинных имен, но так же могут ссылаться на рекурсивные типы:
 
 ```crystal
 alias RecArray = Array(Int32) | Array(RecArray)
@@ -21,7 +21,7 @@ ary.push ary
 ary #=> [[1, 2, 3], [...]]
 ```
 
-A real-world example of a recursive type is json:
+Реальный пример использования рекурсивного типа - это json:
 
 ```crystal
 module Json
