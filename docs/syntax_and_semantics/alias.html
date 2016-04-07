@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.7.10" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.7.10" data-basepath=".." data-revision="Fri Apr 08 2016 02:53:13 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1995,14 +1995,14 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="alias">alias</h1>
-<p>With <code>alias</code> you can give a type a different name:</p>
+                        <h1 id="%D0%BF%D1%81%D0%B5%D0%B2%D0%B4%D0%BE%D0%BD%D0%B8%D0%BC%D1%8B">&#x41F;&#x441;&#x435;&#x432;&#x434;&#x43E;&#x43D;&#x438;&#x43C;&#x44B;</h1>
+<p>&#x418;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x44F; &apos;alias&apos; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x44C; &#x434;&#x43B;&#x44F; &#x442;&#x438;&#x43F;&#x430; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x435; &#x438;&#x43C;&#x44F;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">alias</span> <span class="hljs-constant">PInt32</span> = <span class="hljs-constant">Pointer</span>(<span class="hljs-constant">Int32</span>)
 
 ptr = <span class="hljs-constant">PInt32</span>.malloc(<span class="hljs-number">1</span>) <span class="hljs-comment"># : Pointer(Int32)</span>
 </code></pre>
-<p>Every time you use an alias the compiler replaces it with the type it refers to.</p>
-<p>Aliases are useful to avoid writing long type names, but also to be able to talk about recursive types:</p>
+<p>&#x41A;&#x430;&#x436;&#x434;&#x44B;&#x439; &#x440;&#x430;&#x437;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x432;&#x44B; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442;&#x435; &#x43F;&#x441;&#x435;&#x432;&#x434;&#x43E;&#x43D;&#x438;&#x43C;, &#x43A;&#x43E;&#x43C;&#x43F;&#x438;&#x43B;&#x44F;&#x442;&#x43E;&#x440; &#x437;&#x430;&#x43C;&#x435;&#x43D;&#x44F;&#x435;&#x442; &#x435;&#x433;&#x43E; &#x43D;&#x430; &#x442;&#x43E;&#x442; &#x442;&#x438;&#x43F;, &#x43D;&#x430; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43E;&#x43D; &#x441;&#x441;&#x44B;&#x43B;&#x430;&#x435;&#x442;&#x441;&#x44F;.</p>
+<p>&#x41F;&#x441;&#x435;&#x432;&#x434;&#x43E;&#x43D;&#x438;&#x43C;&#x44B; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x438; &#x434;&#x43B;&#x44F; &#x438;&#x437;&#x431;&#x435;&#x436;&#x430;&#x43D;&#x438;&#x44F; &#x441;&#x43B;&#x438;&#x448;&#x43A;&#x43E;&#x43C; &#x434;&#x43B;&#x438;&#x43D;&#x43D;&#x44B;&#x445; &#x438;&#x43C;&#x435;&#x43D;, &#x43D;&#x43E; &#x442;&#x430;&#x43A; &#x436;&#x435; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x441;&#x441;&#x44B;&#x43B;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x430; &#x440;&#x435;&#x43A;&#x443;&#x440;&#x441;&#x438;&#x432;&#x43D;&#x44B;&#x435; &#x442;&#x438;&#x43F;&#x44B;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">alias</span> <span class="hljs-constant">RecArray</span> = <span class="hljs-constant">Array</span>(<span class="hljs-constant">Int32</span>) | <span class="hljs-constant">Array</span>(<span class="hljs-constant">RecArray</span>)
 
 ary = [] <span class="hljs-keyword">of</span> <span class="hljs-constant">RecArray</span>
@@ -2010,7 +2010,7 @@ ary.push [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>
 ary.push ary
 ary <span class="hljs-comment">#=&gt; [[1, 2, 3], [...]]</span>
 </code></pre>
-<p>A real-world example of a recursive type is json:</p>
+<p>&#x420;&#x435;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x44F; &#x440;&#x435;&#x43A;&#x443;&#x440;&#x441;&#x438;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x442;&#x438;&#x43F;&#x430; - &#x44D;&#x442;&#x43E; json:</p>
 <pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Json</span></span>
   <span class="hljs-keyword">alias</span> <span class="hljs-constant">Type</span> = <span class="hljs-constant">Nil</span> |
                <span class="hljs-constant">Bool</span> |
