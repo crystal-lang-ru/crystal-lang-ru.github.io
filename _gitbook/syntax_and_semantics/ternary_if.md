@@ -1,11 +1,11 @@
-# Ternary if
+# Тернарный if
 
-The ternary `if` allows writing an `if` in a shorter way:
+Тернарный оператор `if` позволяет записывать условия компактнее:
 
 ```crystal
 a = 1 > 2 ? 3 : 4
 
-# The above is the same as:
+# То же, что и:
 a = if 1 > 2
       3
     else
