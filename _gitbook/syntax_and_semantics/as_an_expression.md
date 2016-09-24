@@ -1,6 +1,6 @@
-# As an expression
+# Как выражение
 
-The value of an `if` is the value of the last expression found in each of its branches:
+`if` возвращает значение, вычисленное в каждой из его ветвей:
 
 ```crystal
 a = if 2 > 1
@@ -11,27 +11,28 @@ a = if 2 > 1
 a #=> 3
 ```
 
-If an `if` branch is empty, or it’s missing, it’s considered as if it had `nil` in it:
+Если одна из ветвей `if` пуста или её нет, считается, что она содержит `nil`:
+
 
 ```crystal
 if 1 > 2
   3
 end
 
-# The above is the same as:
+# То же, что и:
 if 1 > 2
   3
 else
   nil
 end
 
-# Another example:
+# Ещё пример:
 if 1 > 2
 else
   3
 end
 
-# The above is the same as:
+# То же, что и:
 if 1 > 2
   nil
 else
