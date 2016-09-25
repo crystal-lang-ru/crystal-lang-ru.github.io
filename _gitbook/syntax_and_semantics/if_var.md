@@ -1,69 +1,69 @@
 # if var
 
-If a variable is the condition of an `if`, inside the `then` branch the variable will be considered as not having the `Nil` type:
+Если переменная является условием `if`, то внутри ветки `then` она будет рассматриваться как переменная типа, отличного от `Nil`:
 
 ```crystal
 a = some_condition ? nil : 3
-# a is Int32 or Nil
+# a может быть Int32 или Nil
 
 if a
-  # Since the only way to get here is if a is truthy,
-  # a can't be nil. So here a is Int32.
+  # Поскольку попасть сюда возможно только если a истинно (truthy),
+  # то a не может быть nil. А значит она Int32.
   a.abs
 end
 ```
 
-This also applies when a variable is assigned in an `if`'s condition:
+То же происходит, когда переменная a задаётся в условии `if`:
 
 ```crystal
 if a = some_expression
-  # here a is not nil
+  # здесь a не nil
 end
 ```
 
-This logic also applies if there are ands (`&&`) in the condition:
+Эта же логика действует, если в условии если логическое И (`&&`):
 
 ```crystal
 if a && b
-  # here both a and b are guaranteed not to be Nil
+  # здесь обе переменные a и b точно не будут Nil
 end
 ```
 
-Here, the right-hand side of the `&&` expression is also guaranteed to have `a` as not `Nil`.
+Здесь правая часть выражения `&&` также гарантирует, что `a` не будет `Nil`.
 
-Of course, reassigning a variable inside the `then` branch makes that variable have a new type based on the expression assigned.
+Само собой, в случае переопределения переменной внутри ветки `then` тип переменной будет изменён в зависимости от переопределяющего выражения.
 
-The above logic **doesn’t** work with instance variables, class variables or global variables:
+Приведённая выше логика **не действует** с переменными объекта, класса и глобальными переменными:
 
 ```crystal
 if @a
-  # here @a can be nil
+  # здесь @a может быть nil
 end
 ```
 
-This is because any method call could potentially affect that instance variable, rendering it `nil`. Another reason is that another thread could change that instance variable after checking the condition.
+Так происходит потому, что любой вызов метода в теории может привести переменную объекта к `nil`. Другая причина заключается в том, что другой поток может изменить значение этой переменной объекта после проверки условия.
 
-To do something with `@a` only when it is not `nil` you have two options:
+Есть два варианта сделать что-нибудь с `@a` если она не `nil`:
 
 ```crystal
-# First option: assign it to a variable
+# Первый вариант: назначить переменную a
 if a = @a
-  # here a can't be nil
+  # здесь a не будет nil
 end
 
-# Second option: use `Object#try` found in the standard library
+# Второй вариант: использовать `Object#try` из стандартной библиотеки
 @a.try do |a|
-  # here a can't be nil
+  # здесь a не будет nil
 end
 ```
 
-That logic also doesn't work with proc and method calls, including getters and properties, because nilable (or, more generally, union-typed) procs and methods aren't guaranteed to return the same more-specific type on two successive calls.
+Эта логика также не работает с вызовами процедур и методов, включающих геттеры и свойства, поскольку процедуры и методы, которые могут быть nil (или, если брать шире, объединённого типа), не могут гарантировать возвращение одно и того же типа при двух успешных вызовах.
 
 ```crystal
-if method # first call to a method that can return Int32 or Nil
-          # here we know that the first call did not return Nil
-  method  # second call can still return Int32 or Nil
+if method # первый вызов метода может вернуть Int32 или Nil
+          # здесь мы узнали, что первый вызов вернул не Nil
+  method  # второй вызов всё ещё может вернуть Int32 или Nil
 end
 ```
 
-The techniques described above for instance variables will also work for proc and method calls.
+Приёмы описания переменных объекта выше можно применить также и для процедур с методами.
