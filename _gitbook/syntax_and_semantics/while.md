@@ -1,6 +1,6 @@
 # while
 
-A `while` executes its body as long as its condition is *truthy*.
+`while` выполняет код в теле до тех пор, пока условие *truthy*.
 
 ```crystal
 while some_condition
@@ -8,13 +8,13 @@ while some_condition
 end
 ```
 
-The condition is first tested and, if *truthy*, the body is executed. That is, the body might never be executed.
+Прежде всего, проверяется условие, и если оно *truthy*, выполняется тело оператора. Именно поэтому код в теле может никогда не выполниться.
 
-A `while`'s type is always `Nil`.
+Тип `while` всегда `Nil`.
 
-Similar to an `if`, if a `while`'s condition is a variable, the variable is guaranteed to not be `nil` inside the body. If the condition is an `var.is_a?(Type)` test, `var` is guaranteed to be of type Type inside the body. And if the condition is a `var.responds_to?(:method)`, `var` is guaranteed to be of a type that responds to that method.
+Аналогично с `if`, если условие `while` переменная, можно с уверенностью говорить, что в теле оператора она не будет `nil`. Если условие задаётся как `var.is_a?(Type)`, `var` гарантированно будет типа Type в теле оператора. А если условие `var.responds_to?(:method)`, то `var` гарантированно будет того типа, который возвращает данный метод.
 
-The type of a variable after a `while` depends on the type it had before the `while` and the type it had before leaving the `while`'s body:
+Тип переменной после выполнения `while` определяется тем типом, который был до выполнения `while` и тем, который был перед выходом из тела `while`.
 
 ```crystal
 a = 1
@@ -27,9 +27,9 @@ end
 # a : Int32 | String
 ```
 
-## Checking the condition at the end of a loop
+## Проверка условия после выполнения цикла
 
-If you need to execute the body at least once and then check for a breaking condition, you can do this:
+Если вам необходимо выполнить код хотя бы один раз прежде, чем проверить условие, можете сделать так:
 
 ```crystal
 while true
@@ -38,7 +38,7 @@ while true
 end
 ```
 
-Or use `loop`, found in the standard library:
+Или используйте `loop` из стандартной библиотеки:
 
 ```crystal
 loop do
