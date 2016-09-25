@@ -1,8 +1,8 @@
 # case
 
-A `case` is a control expression that allows a sort of pattern matching. It allows writing a chain of if-else-if with a small change in semantic and some more powerful constructs.
+`case` — управляющее выражение, которое в некотором роде проверяет на соответствие шаблону. Оно позволяет писать цепочки условий с минимальными изменениями в семантике и использовать более мощные конструкции.
 
-In its basic form, it allows matching a value against other values:
+В общем случае оно сопоставляет одно значение с рядом других значений.
 
 ```crystal
 case exp
@@ -14,7 +14,7 @@ else
   do_another_thing
 end
 
-# The above is the same as:
+# То же, что и:
 tmp = exp
 if value1 === tmp || value2 === tmp
   do_something
@@ -25,9 +25,9 @@ else
 end
 ```
 
-Note that `===` is used for comparing an expression against a `case`'s value.
+Обратите внимание, что `===` используется для сравнения, аналогичного сравнению в операторе `case`.
 
-If a `when`'s expression is a type, `is_a?` is used. Additionally, if the case expression is a variable or a variable assignment the type of the variable is restricted:
+Если в выражении `when` указан тип, в аналогичной конструкции `if` используется `is_a?`. Кроме того, если выражение `case` — переменная или присваивание значения переменной, тип переменной будет ограничен:
 
 ```crystal
 case var
@@ -38,11 +38,11 @@ when Int32
   # var : Int32
   do_something_else
 else
-  # here var is neither a String nor an Int32
+  # здесь переменная var не String и не Int32
   do_another_thing
 end
 
-# The above is the same as:
+# То же, что и:
 if var.is_a?(String)
   do_something
 elsif var.is_a?(Int32)
@@ -52,7 +52,7 @@ else
 end
 ```
 
-You can invoke a method on the `case`'s expression in a `when` by using the implicit-object syntax:
+Вы можете вызвать метод выражения `case` в выражении `when` использовав синтаксис неявного объекта:
 
 ```crystal
 case num
@@ -62,7 +62,7 @@ when .odd?
   do_something_else
 end
 
-# The above is the same as:
+# То же, что и:
 tmp = num
 if tmp.even?
   do_something
@@ -71,7 +71,7 @@ elsif tmp.odd?
 end
 ```
 
-Finally, you can ommit the `case`'s value:
+А ещё вы можете пренебречь значением `case`:
 
 ```crystal
 case
@@ -81,7 +81,7 @@ when cond3
   do_something_else
 end
 
-# The above is the same as:
+# То же, что и:
 if cond1 || cond2
   do_something
 elsif cond3
@@ -89,4 +89,4 @@ elsif cond3
 end
 ```
 
-This sometimes leads to code that is more natural to read.
+Порой так можно сделать код ближе к человеческому языку.
