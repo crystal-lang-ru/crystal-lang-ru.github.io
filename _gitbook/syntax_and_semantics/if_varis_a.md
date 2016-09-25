@@ -1,18 +1,18 @@
 # if var.is_a?(...)
 
-If an `if`'s condition is an `is_a?` test, the type of a variable is guaranteed to be restricted by that type in the `then` branch.
+Если в условии `if` выполняется проверка `is_a?`, то переменная в ветке `then` гарантированно будет того типа, который указан в условии.
 
 ```crystal
 if a.is_a?(String)
-  # here a is a String
+  # здесь a будет String
 end
 
 if b.is_a?(Number)
-  # here b is a Number
+  # здесь b будет Number
 end
 ```
 
-Additionally, in the `else` branch the type of the variable is guaranteed to not be restricted by that type:
+Кроме того, в ветке `else` тип переменной не будет ограничен типом, указанном в условии:
 
 ```crystal
 a = some_condition ? 1 : "hello"
@@ -25,30 +25,30 @@ else
 end
 ```
 
-Note that you can use any type as an `is_a?` test, like abstract classes and modules.
+Обратите внимание, что при проверке `is_a?` можно использовать любой тип, в том числе абстрактные классы и модули.
 
-The above also works if there are ands (`&&`) in the condition:
+Сказанное выше действует также при использовании логического И (`&&`) в условии:
 
 ```crystal
 if a.is_a?(String) && b.is_a?(Number)
-  # here a is a String and b is a Number
+  # здесь a будет String и b будет Number
 end
 ```
 
-The above **doesn’t** work with instance variables, class variables or global variables. To work with these, first assign them to a variable:
+Однако сказанное выше **не работает** с переменными объекта, класса и глобальными переменными. Для работы с ними сначала нужно присвоить их значение локальной переменной:
 
 ```crystal
 if @a.is_a?(String)
-  # here @a is not guaranteed to be a String
+  # нельзя утверждать, что @a наверняка будет String
 end
 
 a = @a
 if a.is_a?(String)
-  # here a is guaranteed to be a String
+  # здесь a гарантированно будет String
 end
 
-# A bit shorter:
+# Более краткая запись:
 if (a = @a).is_a?(String)
-  # here a is guaranteed to be a String
+  # здесь a гарантированно будет String
 end
 ```
