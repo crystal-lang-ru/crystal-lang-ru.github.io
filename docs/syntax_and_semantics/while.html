@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.6.5" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.6.5" data-basepath=".." data-revision="Tue Sep 27 2016 23:18:11 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1996,15 +1996,15 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="while">while</h1>
-<p>A <code>while</code> executes its body as long as its condition is <em>truthy</em>.</p>
+<p><code>while</code> &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x442; &#x43A;&#x43E;&#x434; &#x432; &#x442;&#x435;&#x43B;&#x435; &#x434;&#x43E; &#x442;&#x435;&#x445; &#x43F;&#x43E;&#x440;, &#x43F;&#x43E;&#x43A;&#x430; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435; <em>truthy</em>.</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">while</span> some_condition
   do_this
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>The condition is first tested and, if <em>truthy</em>, the body is executed. That is, the body might never be executed.</p>
-<p>A <code>while</code>&apos;s type is always <code>Nil</code>.</p>
-<p>Similar to an <code>if</code>, if a <code>while</code>&apos;s condition is a variable, the variable is guaranteed to not be <code>nil</code> inside the body. If the condition is an <code>var.is_a?(Type)</code> test, <code>var</code> is guaranteed to be of type Type inside the body. And if the condition is a <code>var.responds_to?(:method)</code>, <code>var</code> is guaranteed to be of a type that responds to that method.</p>
-<p>The type of a variable after a <code>while</code> depends on the type it had before the <code>while</code> and the type it had before leaving the <code>while</code>&apos;s body:</p>
+<p>&#x41F;&#x440;&#x435;&#x436;&#x434;&#x435; &#x432;&#x441;&#x435;&#x433;&#x43E;, &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435;, &#x438; &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x43D;&#x43E; <em>truthy</em>, &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x442;&#x435;&#x43B;&#x43E; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430;. &#x418;&#x43C;&#x435;&#x43D;&#x43D;&#x43E; &#x43F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; &#x43A;&#x43E;&#x434; &#x432; &#x442;&#x435;&#x43B;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x43D;&#x438;&#x43A;&#x43E;&#x433;&#x434;&#x430; &#x43D;&#x435; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x44C;&#x441;&#x44F;.</p>
+<p>&#x422;&#x438;&#x43F; <code>while</code> &#x432;&#x441;&#x435;&#x433;&#x434;&#x430; <code>Nil</code>.</p>
+<p>&#x410;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x43D;&#x43E; &#x441; <code>if</code>, &#x435;&#x441;&#x43B;&#x438; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435; <code>while</code> &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F;, &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x441; &#x443;&#x432;&#x435;&#x440;&#x435;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x44C;&#x44E; &#x433;&#x43E;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x44C;, &#x447;&#x442;&#x43E; &#x432; &#x442;&#x435;&#x43B;&#x435; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; &#x43E;&#x43D;&#x430; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; <code>nil</code>. &#x415;&#x441;&#x43B;&#x438; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435; &#x437;&#x430;&#x434;&#x430;&#x451;&#x442;&#x441;&#x44F; &#x43A;&#x430;&#x43A; <code>var.is_a?(Type)</code>, <code>var</code> &#x433;&#x430;&#x440;&#x430;&#x43D;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E; &#x431;&#x443;&#x434;&#x435;&#x442; &#x442;&#x438;&#x43F;&#x430; Type &#x432; &#x442;&#x435;&#x43B;&#x435; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430;. &#x410; &#x435;&#x441;&#x43B;&#x438; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435; <code>var.responds_to?(:method)</code>, &#x442;&#x43E; <code>var</code> &#x433;&#x430;&#x440;&#x430;&#x43D;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x43D;&#x43E; &#x431;&#x443;&#x434;&#x435;&#x442; &#x442;&#x43E;&#x433;&#x43E; &#x442;&#x438;&#x43F;&#x430;, &#x43D;&#x430; &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x43E;&#x442;&#x432;&#x435;&#x447;&#x430;&#x435;&#x442; &#x434;&#x430;&#x43D;&#x43D;&#x44B;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434;.</p>
+<p>&#x422;&#x438;&#x43F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F; <code>while</code> &#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x442;&#x435;&#x43C; &#x442;&#x438;&#x43F;&#x43E;&#x43C;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x44B;&#x43B; &#x434;&#x43E; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F; <code>while</code> &#x438; &#x442;&#x435;&#x43C;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x431;&#x44B;&#x43B; &#x43F;&#x435;&#x440;&#x435;&#x434; &#x432;&#x44B;&#x445;&#x43E;&#x434;&#x43E;&#x43C; &#x438;&#x437; &#x442;&#x435;&#x43B;&#x430; <code>while</code>.</p>
 <pre><code class="lang-crystal">a = <span class="hljs-number">1</span>
 <span class="hljs-keyword">while</span> some_condition
   <span class="hljs-comment"># a : Int32 | String</span>
@@ -2014,14 +2014,14 @@
 <span class="hljs-keyword">end</span>
 <span class="hljs-comment"># a : Int32 | String</span>
 </code></pre>
-<h2 id="checking-the-condition-at-the-end-of-a-loop">Checking the condition at the end of a loop</h2>
-<p>If you need to execute the body at least once and then check for a breaking condition, you can do this:</p>
+<h2 id="%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D1%86%D0%B8%D0%BA%D0%BB%D0%B0">&#x41F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x430; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x44F; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x435;&#x43D;&#x438;&#x44F; &#x446;&#x438;&#x43A;&#x43B;&#x430;</h2>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x432;&#x430;&#x43C; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C;&#x43E; &#x432;&#x44B;&#x43F;&#x43E;&#x43B;&#x43D;&#x438;&#x442;&#x44C; &#x43A;&#x43E;&#x434; &#x445;&#x43E;&#x442;&#x44F; &#x431;&#x44B; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437; &#x43F;&#x440;&#x435;&#x436;&#x434;&#x435;, &#x447;&#x435;&#x43C; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x438;&#x442;&#x44C; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435;, &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x442;&#x430;&#x43A;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">while</span> <span class="hljs-literal">true</span>
   do_something
   <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> some_condition
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Or use <code>loop</code>, found in the standard library:</p>
+<p>&#x418;&#x43B;&#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; <code>loop</code> &#x438;&#x437; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x439; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A;&#x438;:</p>
 <pre><code class="lang-crystal">loop <span class="hljs-keyword">do</span>
   do_something
   <span class="hljs-keyword">break</span> <span class="hljs-keyword">if</span> some_condition

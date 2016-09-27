@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.6.4" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.6.4" data-basepath=".." data-revision="Tue Sep 27 2016 23:18:11 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1996,8 +1996,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="case">case</h1>
-<p>A <code>case</code> is a control expression that allows a sort of pattern matching. It allows writing a chain of if-else-if with a small change in semantic and some more powerful constructs.</p>
-<p>In its basic form, it allows matching a value against other values:</p>
+<p><code>case</code> &#x2014; &#x443;&#x43F;&#x440;&#x430;&#x432;&#x43B;&#x44F;&#x44E;&#x449;&#x435;&#x435; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x435; &#x432; &#x43D;&#x435;&#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x43E;&#x43C; &#x440;&#x43E;&#x434;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x44F;&#x435;&#x442; &#x43D;&#x430; &#x441;&#x43E;&#x43E;&#x442;&#x432;&#x435;&#x442;&#x441;&#x442;&#x432;&#x438;&#x435; &#x448;&#x430;&#x431;&#x43B;&#x43E;&#x43D;&#x443;. &#x41E;&#x43D;&#x43E; &#x43F;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x435;&#x442; &#x43F;&#x438;&#x441;&#x430;&#x442;&#x44C; &#x446;&#x435;&#x43F;&#x43E;&#x447;&#x43A;&#x438; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x439; &#x441; &#x43C;&#x438;&#x43D;&#x438;&#x43C;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C;&#x438; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x435;&#x43D;&#x438;&#x44F;&#x43C;&#x438; &#x432; &#x441;&#x435;&#x43C;&#x430;&#x43D;&#x442;&#x438;&#x43A;&#x435; &#x438; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x431;&#x43E;&#x43B;&#x435;&#x435; &#x43C;&#x43E;&#x449;&#x43D;&#x44B;&#x435; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x438;&#x438;.</p>
+<p>&#x412; &#x43E;&#x431;&#x449;&#x435;&#x43C; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x435; &#x43E;&#x43D;&#x43E; &#x441;&#x43E;&#x43F;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x43B;&#x44F;&#x435;&#x442; &#x43E;&#x434;&#x43D;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x441; &#x440;&#x44F;&#x434;&#x43E;&#x43C; &#x434;&#x440;&#x443;&#x433;&#x438;&#x445; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439;.</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">case</span> exp
 <span class="hljs-keyword">when</span> value1, value2
   do_something
@@ -2007,7 +2007,7 @@
   do_another_thing
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># The above is the same as:</span>
+<span class="hljs-comment"># &#x422;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 tmp = exp
 <span class="hljs-keyword">if</span> value1 === tmp || value2 === tmp
   do_something
@@ -2017,8 +2017,8 @@ tmp = exp
   do_another_thing
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Note that <code>===</code> is used for comparing an expression against a <code>case</code>&apos;s value.</p>
-<p>If a <code>when</code>&apos;s expression is a type, <code>is_a?</code> is used. Additionally, if the case expression is a variable or a variable assignment the type of the variable is restricted:</p>
+<p>&#x41E;&#x431;&#x440;&#x430;&#x442;&#x438;&#x442;&#x435; &#x432;&#x43D;&#x438;&#x43C;&#x430;&#x43D;&#x438;&#x435;, &#x447;&#x442;&#x43E; <code>===</code> &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44F; &#x434;&#x43B;&#x44F; &#x441;&#x440;&#x430;&#x432;&#x43D;&#x435;&#x43D;&#x438;&#x44F;, &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x441;&#x440;&#x430;&#x432;&#x43D;&#x435;&#x43D;&#x438;&#x44E; &#x432; &#x43E;&#x43F;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x435; <code>case</code>.</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x432; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x438; <code>when</code> &#x443;&#x43A;&#x430;&#x437;&#x430;&#x43D; &#x442;&#x438;&#x43F;, &#x432; &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x43D;&#x43E;&#x439; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x438;&#x438; <code>if</code> &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x435;&#x442;&#x441;&#x44F; <code>is_a?</code>. &#x41A;&#x440;&#x43E;&#x43C;&#x435; &#x442;&#x43E;&#x433;&#x43E;, &#x435;&#x441;&#x43B;&#x438; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; <code>case</code> &#x2014; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F; &#x438;&#x43B;&#x438; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x430;&#x438;&#x432;&#x430;&#x43D;&#x438;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439;, &#x442;&#x438;&#x43F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x43E;&#x433;&#x440;&#x430;&#x43D;&#x438;&#x447;&#x435;&#x43D;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">case</span> var
 <span class="hljs-keyword">when</span> <span class="hljs-constant">String</span>
   <span class="hljs-comment"># var : String</span>
@@ -2027,11 +2027,11 @@ tmp = exp
   <span class="hljs-comment"># var : Int32</span>
   do_something_else
 <span class="hljs-keyword">else</span>
-  <span class="hljs-comment"># here var is neither a String nor an Int32</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F; var &#x43D;&#x435; String &#x438; &#x43D;&#x435; Int32</span>
   do_another_thing
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># The above is the same as:</span>
+<span class="hljs-comment"># &#x422;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 <span class="hljs-keyword">if</span> var.is_a?(<span class="hljs-constant">String</span>)
   do_something
 <span class="hljs-keyword">elsif</span> var.is_a?(<span class="hljs-constant">Int32</span>)
@@ -2040,7 +2040,7 @@ tmp = exp
   do_another_thing
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>You can invoke a method on the <code>case</code>&apos;s expression in a <code>when</code> by using the implicit-object syntax:</p>
+<p>&#x412;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x432;&#x44B;&#x437;&#x432;&#x430;&#x442;&#x44C; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; <code>case</code> &#x432; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x438; <code>when</code> &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x432; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43D;&#x435;&#x44F;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">case</span> num
 <span class="hljs-keyword">when</span> .even?
   do_something
@@ -2048,7 +2048,7 @@ tmp = exp
   do_something_else
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># The above is the same as:</span>
+<span class="hljs-comment"># &#x422;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 tmp = num
 <span class="hljs-keyword">if</span> tmp.even?
   do_something
@@ -2056,7 +2056,7 @@ tmp = num
   do_something_else
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Finally, you can ommit the <code>case</code>&apos;s value:</p>
+<p>&#x410; &#x435;&#x449;&#x451; &#x432;&#x44B; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x440;&#x435;&#x43D;&#x435;&#x431;&#x440;&#x435;&#x447;&#x44C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435;&#x43C; <code>case</code>:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">case</span>
 <span class="hljs-keyword">when</span> cond1, cond2
   do_something
@@ -2064,14 +2064,14 @@ tmp = num
   do_something_else
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># The above is the same as:</span>
+<span class="hljs-comment"># &#x422;&#x43E; &#x436;&#x435;, &#x447;&#x442;&#x43E; &#x438;:</span>
 <span class="hljs-keyword">if</span> cond1 || cond2
   do_something
 <span class="hljs-keyword">elsif</span> cond3
   do_something_else
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This sometimes leads to code that is more natural to read.</p>
+<p>&#x41F;&#x43E;&#x440;&#x43E;&#x439; &#x442;&#x430;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x43A;&#x43E;&#x434; &#x431;&#x43B;&#x438;&#x436;&#x435; &#x43A; &#x447;&#x435;&#x43B;&#x43E;&#x432;&#x435;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x43C;&#x443; &#x44F;&#x437;&#x44B;&#x43A;&#x443;.</p>
 
                     
                     </section>

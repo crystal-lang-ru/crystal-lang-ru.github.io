@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.6.2.4" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.6.2.4" data-basepath=".." data-revision="Tue Sep 27 2016 23:18:11 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1996,52 +1996,52 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="if-var">if var</h1>
-<p>If a variable is the condition of an <code>if</code>, inside the <code>then</code> branch the variable will be considered as not having the <code>Nil</code> type:</p>
+<p>&#x415;&#x441;&#x43B;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F; &#x44F;&#x432;&#x43B;&#x44F;&#x435;&#x442;&#x441;&#x44F; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x435;&#x43C; <code>if</code>, &#x442;&#x43E; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; &#x432;&#x435;&#x442;&#x43A;&#x438; <code>then</code> &#x43E;&#x43D;&#x430; &#x431;&#x443;&#x434;&#x435;&#x442; &#x440;&#x430;&#x441;&#x441;&#x43C;&#x430;&#x442;&#x440;&#x438;&#x432;&#x430;&#x442;&#x44C;&#x441;&#x44F; &#x43A;&#x430;&#x43A; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F; &#x442;&#x438;&#x43F;&#x430;, &#x43E;&#x442;&#x43B;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x442; <code>Nil</code>:</p>
 <pre><code class="lang-crystal">a = some_condition ? <span class="hljs-literal">nil</span> <span class="hljs-symbol">:</span> <span class="hljs-number">3</span>
-<span class="hljs-comment"># a is Int32 or Nil</span>
+<span class="hljs-comment"># a &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; Int32 &#x438;&#x43B;&#x438; Nil</span>
 
 <span class="hljs-keyword">if</span> a
-  <span class="hljs-comment"># Since the only way to get here is if a is truthy,</span>
-  <span class="hljs-comment"># a can&apos;t be nil. So here a is Int32.</span>
+  <span class="hljs-comment"># &#x41F;&#x43E;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x443; &#x43F;&#x43E;&#x43F;&#x430;&#x441;&#x442;&#x44C; &#x441;&#x44E;&#x434;&#x430; &#x432;&#x43E;&#x437;&#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x442;&#x43E;&#x43B;&#x44C;&#x43A;&#x43E; &#x435;&#x441;&#x43B;&#x438; a &#x438;&#x441;&#x442;&#x438;&#x43D;&#x43D;&#x43E; (truthy),</span>
+  <span class="hljs-comment"># &#x442;&#x43E; a &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; nil. &#x410; &#x437;&#x43D;&#x430;&#x447;&#x438;&#x442; &#x43E;&#x43D;&#x430; Int32.</span>
   a.abs
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This also applies when a variable is assigned in an <code>if</code>&apos;s condition:</p>
+<p>&#x422;&#x43E; &#x436;&#x435; &#x43F;&#x440;&#x43E;&#x438;&#x441;&#x445;&#x43E;&#x434;&#x438;&#x442;, &#x43A;&#x43E;&#x433;&#x434;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x430;&#x44F; a &#x437;&#x430;&#x434;&#x430;&#x451;&#x442;&#x441;&#x44F; &#x432; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x438; <code>if</code>:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">if</span> a = some_expression
-  <span class="hljs-comment"># here a is not nil</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; a &#x43D;&#x435; nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This logic also applies if there are ands (<code>&amp;&amp;</code>) in the condition:</p>
+<p>&#x42D;&#x442;&#x430; &#x436;&#x435; &#x43B;&#x43E;&#x433;&#x438;&#x43A;&#x430; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442;, &#x435;&#x441;&#x43B;&#x438; &#x432; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x438; &#x435;&#x441;&#x43B;&#x438; &#x43B;&#x43E;&#x433;&#x438;&#x447;&#x435;&#x441;&#x43A;&#x43E;&#x435; &#x418; (<code>&amp;&amp;</code>):</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">if</span> a &amp;&amp; b
-  <span class="hljs-comment"># here both a and b are guaranteed not to be Nil</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; &#x43E;&#x431;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x435; a &#x438; b &#x442;&#x43E;&#x447;&#x43D;&#x43E; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x443;&#x442; Nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>Here, the right-hand side of the <code>&amp;&amp;</code> expression is also guaranteed to have <code>a</code> as not <code>Nil</code>.</p>
-<p>Of course, reassigning a variable inside the <code>then</code> branch makes that variable have a new type based on the expression assigned.</p>
-<p>The above logic <strong>doesn&#x2019;t</strong> work with instance variables, class variables or global variables:</p>
+<p>&#x417;&#x434;&#x435;&#x441;&#x44C; &#x43F;&#x440;&#x430;&#x432;&#x430;&#x44F; &#x447;&#x430;&#x441;&#x442;&#x44C; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F; <code>&amp;&amp;</code> &#x442;&#x430;&#x43A;&#x436;&#x435; &#x433;&#x430;&#x440;&#x430;&#x43D;&#x442;&#x438;&#x440;&#x443;&#x435;&#x442;, &#x447;&#x442;&#x43E; <code>a</code> &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; <code>Nil</code>.</p>
+<p>&#x421;&#x430;&#x43C;&#x43E; &#x441;&#x43E;&#x431;&#x43E;&#x439;, &#x432; &#x441;&#x43B;&#x443;&#x447;&#x430;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x435;&#x43D;&#x438;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x438; &#x432;&#x435;&#x442;&#x43A;&#x438; <code>then</code> &#x442;&#x438;&#x43F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x431;&#x443;&#x434;&#x435;&#x442; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x451;&#x43D; &#x432; &#x437;&#x430;&#x432;&#x438;&#x441;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x438; &#x43E;&#x442; &#x43F;&#x435;&#x440;&#x435;&#x43E;&#x43F;&#x440;&#x435;&#x434;&#x435;&#x43B;&#x44F;&#x44E;&#x449;&#x435;&#x433;&#x43E; &#x432;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x44F;.</p>
+<p>&#x41F;&#x440;&#x438;&#x432;&#x435;&#x434;&#x451;&#x43D;&#x43D;&#x430;&#x44F; &#x432;&#x44B;&#x448;&#x435; &#x43B;&#x43E;&#x433;&#x438;&#x43A;&#x430; <strong>&#x43D;&#x435; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x443;&#x435;&#x442;</strong> &#x441; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430;, &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430; &#x438; &#x433;&#x43B;&#x43E;&#x431;&#x430;&#x43B;&#x44C;&#x43D;&#x44B;&#x43C;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x43C;&#x438;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">if</span> <span class="hljs-variable">@a</span>
-  <span class="hljs-comment"># here @a can be nil</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; @a &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x431;&#x44B;&#x442;&#x44C; nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>This is because any method call could potentially affect that instance variable, rendering it <code>nil</code>. Another reason is that another thread could change that instance variable after checking the condition.</p>
-<p>To do something with <code>@a</code> only when it is not <code>nil</code> you have two options:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># First option: assign it to a variable</span>
+<p>&#x422;&#x430;&#x43A; &#x43F;&#x440;&#x43E;&#x438;&#x441;&#x445;&#x43E;&#x434;&#x438;&#x442; &#x43F;&#x43E;&#x442;&#x43E;&#x43C;&#x443;, &#x447;&#x442;&#x43E; &#x43B;&#x44E;&#x431;&#x43E;&#x439; &#x432;&#x44B;&#x437;&#x43E;&#x432; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x432; &#x442;&#x435;&#x43E;&#x440;&#x438;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x43F;&#x440;&#x438;&#x432;&#x435;&#x441;&#x442;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x443;&#x44E; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; &#x43A; <code>nil</code>. &#x414;&#x440;&#x443;&#x433;&#x430;&#x44F; &#x43F;&#x440;&#x438;&#x447;&#x438;&#x43D;&#x430; &#x437;&#x430;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x432; &#x442;&#x43E;&#x43C;, &#x447;&#x442;&#x43E; &#x434;&#x440;&#x443;&#x433;&#x43E;&#x439; &#x43F;&#x43E;&#x442;&#x43E;&#x43A; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x438;&#x437;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x44C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x435; &#x44D;&#x442;&#x43E;&#x439; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; &#x43F;&#x43E;&#x441;&#x43B;&#x435; &#x43F;&#x440;&#x43E;&#x432;&#x435;&#x440;&#x43A;&#x438; &#x443;&#x441;&#x43B;&#x43E;&#x432;&#x438;&#x44F;.</p>
+<p>&#x415;&#x441;&#x442;&#x44C; &#x434;&#x432;&#x430; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;&#x430; &#x441;&#x434;&#x435;&#x43B;&#x430;&#x442;&#x44C; &#x447;&#x442;&#x43E;-&#x43D;&#x438;&#x431;&#x443;&#x434;&#x44C; &#x441; <code>@a</code> &#x435;&#x441;&#x43B;&#x438; &#x43E;&#x43D;&#x430; &#x43D;&#x435; <code>nil</code>:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># &#x41F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;: &#x43D;&#x430;&#x437;&#x43D;&#x430;&#x447;&#x438;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x443;&#x44E; a</span>
 <span class="hljs-keyword">if</span> a = <span class="hljs-variable">@a</span>
-  <span class="hljs-comment"># here a can&apos;t be nil</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; a &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; nil</span>
 <span class="hljs-keyword">end</span>
 
-<span class="hljs-comment"># Second option: use `Object#try` found in the standard library</span>
+<span class="hljs-comment"># &#x412;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x432;&#x430;&#x440;&#x438;&#x430;&#x43D;&#x442;: &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x43E;&#x432;&#x430;&#x442;&#x44C; `Object#try` &#x438;&#x437; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x439; &#x431;&#x438;&#x431;&#x43B;&#x438;&#x43E;&#x442;&#x435;&#x43A;&#x438;</span>
 <span class="hljs-variable">@a</span>.try <span class="hljs-keyword">do</span> |a|
-  <span class="hljs-comment"># here a can&apos;t be nil</span>
+  <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; a &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435;&#x442; nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>That logic also doesn&apos;t work with proc and method calls, including getters and properties, because nilable (or, more generally, union-typed) procs and methods aren&apos;t guaranteed to return the same more-specific type on two successive calls.</p>
-<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> method <span class="hljs-comment"># first call to a method that can return Int32 or Nil</span>
-          <span class="hljs-comment"># here we know that the first call did not return Nil</span>
-  method  <span class="hljs-comment"># second call can still return Int32 or Nil</span>
+<p>&#x42D;&#x442;&#x430; &#x43B;&#x43E;&#x433;&#x438;&#x43A;&#x430; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x43D;&#x435; &#x440;&#x430;&#x431;&#x43E;&#x442;&#x430;&#x435;&#x442; &#x441; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430;&#x43C;&#x438; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440; &#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x432;, &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x44E;&#x449;&#x438;&#x445; &#x433;&#x435;&#x442;&#x442;&#x435;&#x440;&#x44B; &#x438; &#x441;&#x432;&#x43E;&#x439;&#x441;&#x442;&#x432;&#x430;, &#x43F;&#x43E;&#x441;&#x43A;&#x43E;&#x43B;&#x44C;&#x43A;&#x443; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440;&#x44B; &#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x44B;, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x435; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x431;&#x44B;&#x442;&#x44C; nil (&#x438;&#x43B;&#x438;, &#x435;&#x441;&#x43B;&#x438; &#x431;&#x440;&#x430;&#x442;&#x44C; &#x448;&#x438;&#x440;&#x435;, &#x43E;&#x442;&#x43D;&#x43E;&#x441;&#x44F;&#x442;&#x441;&#x44F; &#x43A; &#x43E;&#x431;&#x44A;&#x435;&#x434;&#x438;&#x43D;&#x451;&#x43D;&#x43D;&#x43E;&#x43C;&#x443; &#x442;&#x438;&#x43F;&#x443;), &#x43D;&#x435; &#x43C;&#x43E;&#x433;&#x443;&#x442; &#x433;&#x430;&#x440;&#x430;&#x43D;&#x442;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x442;&#x44C; &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43D;&#x438;&#x435; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x438; &#x442;&#x43E;&#x433;&#x43E; &#x436;&#x435; &#x442;&#x438;&#x43F;&#x430; &#x43F;&#x440;&#x438; &#x434;&#x432;&#x443;&#x445; &#x443;&#x441;&#x43F;&#x435;&#x448;&#x43D;&#x44B;&#x445; &#x432;&#x44B;&#x437;&#x43E;&#x432;&#x430;&#x445;.</p>
+<pre><code class="lang-crystal"><span class="hljs-keyword">if</span> method <span class="hljs-comment"># &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x432;&#x44B;&#x437;&#x43E;&#x432; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x44C; Int32 &#x438;&#x43B;&#x438; Nil</span>
+          <span class="hljs-comment"># &#x437;&#x434;&#x435;&#x441;&#x44C; &#x43C;&#x44B; &#x443;&#x437;&#x43D;&#x430;&#x43B;&#x438;, &#x447;&#x442;&#x43E; &#x43F;&#x435;&#x440;&#x432;&#x44B;&#x439; &#x432;&#x44B;&#x437;&#x43E;&#x432; &#x432;&#x435;&#x440;&#x43D;&#x443;&#x43B; &#x43D;&#x435; Nil</span>
+  method  <span class="hljs-comment"># &#x432;&#x442;&#x43E;&#x440;&#x43E;&#x439; &#x432;&#x44B;&#x437;&#x43E;&#x432; &#x432;&#x441;&#x451; &#x435;&#x449;&#x451; &#x43C;&#x43E;&#x436;&#x435;&#x442; &#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x44C; Int32 &#x438;&#x43B;&#x438; Nil</span>
 <span class="hljs-keyword">end</span>
 </code></pre>
-<p>The techniques described above for instance variables will also work for proc and method calls.</p>
+<p>&#x41F;&#x440;&#x438;&#x451;&#x43C;&#x44B; &#x43E;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x44B;&#x445; &#x43E;&#x431;&#x44A;&#x435;&#x43A;&#x442;&#x430; &#x432;&#x44B;&#x448;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x43E; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x43D;&#x438;&#x442;&#x44C; &#x442;&#x430;&#x43A;&#x436;&#x435; &#x438; &#x434;&#x43B;&#x44F; &#x43F;&#x440;&#x43E;&#x446;&#x435;&#x434;&#x443;&#x440; &#x441; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430;&#x43C;&#x438;.</p>
 
                     
                     </section>
