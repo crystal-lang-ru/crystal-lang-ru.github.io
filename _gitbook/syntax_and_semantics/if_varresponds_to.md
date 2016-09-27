@@ -1,41 +1,40 @@
 # if var.responds_to?(...)
 
-If an `if`'s condition is a `responds_to?` test, in the `then` branch the type of a variable is guaranteed to be restricted to the types that respond to that method:
+Если в условии `if` есть проверка `responds_to?`, то в ветке `then` тип переменной гарантированно будет ограничен теми типами, на которые отвечает этот метод:
 
 ```crystal
 if a.responds_to?(:abs)
-  # here a's type will be reduced to those responding to the 'abs' method
+  # здесь тип a будет ограничен теми, на которые отвечает метод 'abs'
 end
 ```
 
-Additionally, in the `else` branch the type of the variable is guaranteed to be restricted to the types that don’t respond to that method:
+Кроме того, в ветке `else` тип переменной гарантированно будет ограничен теми типами, на которые метод не отвечает:
 
 ```crystal
 a = some_condition ? 1 : "hello"
 # a : Int32 | String
 
 if a.responds_to?(:abs)
-  # here a will be Int32, since Int32#abs exists but String#abs doesn't
+  # здесь a будет Int32, поскольку Int32#abs существует, а String#abs нет
 else
-  # here a will be String
+  # здесь a будет String
 end
 ```
 
-The above **doesn’t** work with instance variables, class variables or global variables. To work with these, first assign them to a variable:
+Сказанное выше **не работает** с переменными объекта, класса и глобальными переменными. Для работы с ними присвойте их значение локальной переменной:
 
 ```crystal
 if @a.responds_to?(:abs)
-  # here @a is not guaranteed to respond to `abs`
+  # нельзя утверждать, что @a ответит на `abs`
 end
 
 a = @a
 if a.responds_to?(:abs)
-  # here a is guaranteed to respond to `abs`
+  # здесь a гарантированно отвечает на `abs`
 end
 
-# A bit shorter:
+# Немного короче:
 if (a = @a).responds_to?(:abs)
-  # here a is guaranteed to respond to `abs`
+  # здесь a гарантированно отвечает на `abs`
 end
 ```
-

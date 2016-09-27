@@ -1,5 +1,5 @@
-# Truthy and falsey values
+# Истинные и ложные значения
 
-A *truthy* value is a value that is considered true for an `if`, `unless`, `while` or `until` guard. A *falsey* value is a value that is considered false in those places.
+*truthy* — это значение, приводимое к true операторами `if`, `unless`, `while` или `until`. Соответственно, *falsey* — значение, приводимое к false.
 
-The only falsey values are `nil`, `false` and null pointers (pointers whose memory address is zero). Any other value is truthy.
+Значениями falsey могут быть только `nil`, `false` и нулевые указатели (указатели с нулевым адресом ячейки памяти). Все остальные значения truthy.

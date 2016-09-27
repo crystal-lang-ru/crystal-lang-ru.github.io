@@ -1,13 +1,13 @@
 # ||
 
-An `||` (or) evaluates its left hand side. If it's *falsey*, it evaluates its right hand side and has that value. Otherwise it has the value of the left hand side. Its type is the union of the types of both sides.
+Оператор `||` (логическое ИЛИ) оценивает левую часть выражения. Если левая часть - ложь, то оператор оценивает правую часть и возвращает ее значение. В противном случае возвращается значение левой части. Этот тип является объединением типов обоих частей выражения.
 
-You can think an `||` as syntax sugar of an `if`:
+Вы можете считать оператор `||` синтаксическим сахаром оператора if:
 
 ```crystal
 some_exp1 || some_exp2
 
-# The above is the same as:
+# Аналагично примеру сверху:
 tmp = some_exp1
 if tmp
   tmp

@@ -1,6 +1,6 @@
 # if
 
-An `if` evaluates the `then` branch if its condition is *truthy*, and evaluates the `else` branch, if there’s any, otherwise.
+`if` выполняет  ветку `then` если условие *truthy* (сводится к true), в противном случае выполняет ветку `else`.
 
 ```crystal
 a = 1
@@ -18,7 +18,7 @@ end
 b #=> 20
 ```
 
-To write a chain of if-else-if you use `elsif`:
+Чтобы написать цепочку условий, используйте `elsif`:
 
 ```crystal
 if some_condition
@@ -30,7 +30,7 @@ else
 end
 ```
 
-After an `if`, a variable’s type depends on the type of the expressions used in both branches.
+После выполнения `if` тип переменной будет зависеть от типа выражений в каждой из ветвей.
 
 ```crystal
 a = 1
@@ -60,9 +60,10 @@ end
 # d : Int32 | Nil
 ```
 
-Note that if a variable is declared inside one of the branches but not in the other one, at the end of the `if` it will also contain the `Nil` type.
+Обратите внимание, что если в одной из ветвей не будет указан тип переменной, после выполнения `if` он будет содержать тип `Nil`.
 
-Inside an `if`'s branch the type of a variable is the one it got assigned in that branch, or the one that it had before the branch if it was not reassigned:
+В теле оператора `if` переменная будет того типа, который назначается в данной ветке. Если тип не был переназначен, он останется прежним:
+
 
 ```crystal
 a = 1
@@ -74,9 +75,9 @@ end
 # a : String | Int32
 ```
 
-That is, a variable’s type is the type of the last expression(s) assigned to it.
+Иначе говоря, тип переменной будет определяться последним выражением, назначившим его.
 
-If one of the branches never reaches past the end of an `if`, like in the case of a `return`, `next`, `break` or `raise`, that type is not considered at the end of the `if`:
+Если одна из ветвей не достигает конца оператора `if`, например, в случае использования `return`, `next`, `break` или `raise`, определяемый ей тип не будет назначен переменной после выхода из тела `if`:
 
 ```crystal
 if some_condition

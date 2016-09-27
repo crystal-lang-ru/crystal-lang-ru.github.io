@@ -1,14 +1,14 @@
-# As a suffix
+# Как суффикс
 
-An `if` can be written as an expression’s suffix:
+У `if` есть сокращённая запись:
 
 ```crystal
 a = 2 if some_condition
 
-# The above is the same as:
+# То же самое, что и:
 if some_condition
   a = 2
 end
 ```
 
-This sometimes leads to code that is more natural to read.
+Такая запись ближе к конструкции человеческого языка.

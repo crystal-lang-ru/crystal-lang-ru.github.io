@@ -1,3 +1,3 @@
-# Control expressions
+# Управляющие выражения
 
-Before talking about control expressions we need to know what *truthy* and *falsey* values are.
+Прежде чем перейти к разговору об управляющих выражениях, стоит разобраться, что такое значения *truthy* и *falsey*.
