@@ -7,7 +7,7 @@
 ```crystal
 some_exp1 || some_exp2
 
-# Аналагично примеру сверху:
+# Аналогично примеру сверху:
 tmp = some_exp1
 if tmp
   tmp
