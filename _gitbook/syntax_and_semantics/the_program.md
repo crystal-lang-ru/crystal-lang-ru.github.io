@@ -1,18 +1,18 @@
-# The Program
+# Программа
 
-The program is a global object in which you can define types, methods and file-local variables.
+Программа — это глобальный объект, в котором вы можете определить типы, методы и файловые локальные переменные.
 
 ```crystal
-# Defines a method in the program
+# Определение метода в программе
 def add(x, y)
   x + y
 end
 
-# Invokes the add method in the program
+# Вызов метода add в программе
 add(1, 2) #=> 3
 ```
 
-A method's value is the value of its last expression, there's no need for explicit `return` expressions. However, explicit `return` are possible:
+Значение метода — значение последнего вычисленного в нём выражения, поэтому нет необходимости явно использовать `return`. Однако явно использовать `return` возможно:
 
 ```crystal
 def even?(num)
@@ -25,6 +25,7 @@ end
 ```
 
 When invoking a method without a receiver, like `add(1, 2)`, it will be searched in the program if not found in the current type or any of its ancestors.
+Если вызвать метод без получателя, например `add(1, 2)`, и его не окажется в текущем типе или в любом из его предков, он будет искаться в программе:
 
 ```crystal
 def add(x, y)
@@ -33,10 +34,10 @@ end
 
 class Foo
   def bar
-    # invokes the program's add method
+    # Вызов программного метода add
     add(1, 2)
 
-    # invokes Foo's baz method
+    # Вызов метода baz класса Foo
     baz(1, 2)
   end
 
@@ -46,7 +47,7 @@ class Foo
 end
 ```
 
-If you want to invoke the program's method, even though the current type defines a method with the same name, prefix the call with `::`:
+Если вам необходимо вызвать программный метод, даже если в текущем типе определён метод с таким же именем, используйте префикс `::`:
 
 ```crystal
 def baz(x, y)
@@ -65,7 +66,7 @@ class Foo
 end
 ```
 
-Variables declared in a program are not visible inside methods:
+Объявленные в программе переменные недоступны из методов:
 
 ```crystal
 x = 1
@@ -77,8 +78,27 @@ end
 add(2)
 ```
 
-Parentheses in method invocations are optional:
+Использование скобок при вызове метода не обязательно:
 
 ```crystal
-add 1, 2 # same as add(1, 2)
+add 1, 2 # То же, что и add(1, 2)
+```
+
+## Main code
+
+Main code, the code that is run when you compile and run a program, can be written directly in a source file without the need to put it in a special "main" method:
+
+```crystal
+# This is a program that prints "Hello Crystal!"
+puts "Hello Crystal!"
+```
+
+Main code can also be inside type declarations:
+
+```crystal
+# This is a program that prints "Hello"
+class Hello
+  # 'self' here is the Hello class
+  puts self
+end
 ```

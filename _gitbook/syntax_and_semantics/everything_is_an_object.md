@@ -1,10 +1,10 @@
-# Everything is an object
+# Всё есть объект
 
-In Crystal everything is an object. The definition of an object boils down to these points:
+В языке Crystal всё является объектом. Определение объекта сводится к следующим пунктам:
 
-* It has a type
-* It can respond to some methods
+* У него есть тип
+* Он может отвечать на некоторые методы
 
-This is everything you can know about an object: its type and whether it responds to some method.
+Это всё, что вы можете знать об объекте: его тип и отвечает ли он на какой-либо метод.
 
-An object's internal state, if any, can only be queried by invoking methods.
+Внутреннее состояние объекта, если таковое имеется, может быть получено только через вызов метода.

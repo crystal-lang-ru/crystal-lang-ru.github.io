@@ -50,7 +50,7 @@
        * [&&](syntax_and_semantics/and.md)
        * [||](syntax_and_semantics/or.md)
    * [Типы и методы](syntax_and_semantics/types_and_methods.md)
-       * [Все является объектом](syntax_and_semantics/everything_is_an_object.md)
+       * [Всё есть объект](syntax_and_semantics/everything_is_an_object.md)
        * [Программа](syntax_and_semantics/the_program.md)
        * [Классы и методы](syntax_and_semantics/classes_and_methods.md)
            * [new, initialize and allocate](syntax_and_semantics/new,_initialize_and_allocate.md)
