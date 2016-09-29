@@ -84,21 +84,21 @@ add(2)
 add 1, 2 # То же, что и add(1, 2)
 ```
 
-## Main code
+## Основной код
 
-Main code, the code that is run when you compile and run a program, can be written directly in a source file without the need to put it in a special "main" method:
+Основной код, — код, запускаемый при компиляции и выполнении программы, может быть записан прямо в исходном файле. Оборочивать его в метод "main" нет необходимости:
 
 ```crystal
-# This is a program that prints "Hello Crystal!"
+# Эта программа выводит "Hello Crystal!"
 puts "Hello Crystal!"
 ```
 
-Main code can also be inside type declarations:
+Основной код также может быть внутри объявлений типа:
 
 ```crystal
-# This is a program that prints "Hello"
+# Эта программа выводит "Hello"
 class Hello
-  # 'self' here is the Hello class
+  # здесь 'self' это класс Hello
   puts self
 end
 ```
