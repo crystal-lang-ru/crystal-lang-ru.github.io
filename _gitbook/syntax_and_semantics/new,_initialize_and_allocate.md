@@ -1,14 +1,14 @@
 # new, initialize and allocate
 
-You create an instance of a class by invoking `new` on that class:
+Экземпляр класса создаётся при вызове `new` этого класса:
 
 ```
 person = Person.new
 ```
 
-Here, `person` is an instance of `Person`.
+Здесь `person` — экземпляр класса `Person`.
 
-We can't do much with `person`, so lets add some concepts to it. A `Person` has a name and an age. In the "Everything is an object" section we said that an object has a type and responds to some methods, which is the only way to interact with objects, so we'll need a `name` and `age` methods. We will store this information in instance variables, which are always prefixed with an *at* (`@`) character. We also want a Person to come to existence with a name of our choice and an age of zero. We code the "come to existence" part with a special `initialize` method, which is normally called a *constructor*:
+Пока что мы ничего не можем сделать с `person`, так что давайте определим некоторые понятия. У класса `Person` может быть имя и возраст. В разделе "Всё есть объект" мы говорили, что у объекта есть тип и он отвечает на ряд методов, которые — наша единственная возможность взаимодействовать с объектом. В общем, нам нужны методы `name` (имя) and `age` (возраст). Мы будем хранить эту информацию в переменных объекта, которые всегда начинаются со знака *коммерческое at* (`@`). А ещё нам нужно, чтобы объект класса `Person` создался сразу с выбранным нами именем и нулевым возрастом. Для этого мы опишем специальный метод `initialize`, который в общем случае называется *конструктором*:
 
 ```crystal
 class Person
@@ -27,7 +27,7 @@ class Person
 end
 ```
 
-Now we can create people like this:
+Теперь мы можем создавать объекты вот так:
 
 ```crystal
 john = Person.new "John"
@@ -39,11 +39,11 @@ john.age #=> 0
 peter.name #=> "Peter"
 ```
 
-(If you wonder why we needed to specify that `name` is a `String` but we didn't need to do it for `age`, check the [global type inference algorithm](type_inference.html))
+(Если у вас возник вопрос, почему мы должны были указать для `name` тип `String`, но не сделали этого для `age`, прочитайте про [алгоритм вывода общего типа](type_inference.html))
 
-Note that we create a `Person` with `new` but we defined the initialization in an `initialize` method, not in a `new` method. Why is this so?
+Обратите внимание, что мы создали `Person` при помощи `new`, но определили инициализацию в методе `initialize`, не в методе `new`. Почему так?
 
-The answer is that when we defined an `initialize` method Crystal defined a `new` method for us, like this:
+Смысл в том, что при определении метода `initialize` Crystal определил метод `new` сам. Примерно так:
 
 ```crystal
 class Person
@@ -55,6 +55,6 @@ class Person
 end
 ```
 
-First, note the `self.new` notation. This means that the method belongs to the **class** `Person`, not to particular instances of that class. This is why we can do `Person.new`.
+Во-первых, обратите внимание на запись `self.new`. Она значит, что метод принадлежит **классу** `Person`, а не отдельным экземплярам этого класса. Именно поэтому мы можем использовать  `Person.new`.
 
-Second, `allocate` is a low-level class method that creates an uninitialized object of the given type. It basically allocates the necessary memory for it. Then `initialize` is invoked on it and then you get the instance. You generally never invoke `allocate`, as it is [unsafe](unsafe.html), but that's the reason why `new` and `initialize` are related.
+Во-вторых, `allocate` — это метод низкоуровневого класса, который создаёт неинициализированный объект заданного типа. Он по сути выделяет необходимую память для него. Затем вызывается `initialize` и мы получаем экземпляр класса. Вы, как правило, никогда не должгы вызывать `allocate`, так как это [небезопасно](unsafe.html), и именно поэтому используются методы `new` и `initialize`.
