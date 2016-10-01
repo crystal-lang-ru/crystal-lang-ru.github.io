@@ -1,10 +1,10 @@
-# Classes and methods
+# Классы и методы
 
-A class is a blueprint from which individual objects are created. As an example, consider a `Person` class. You declare a class like this:
+Класс — это макет, по которому создаются индивидуальные объекты. Например, рассмотрим класс `Person`. Объявляться он будет так:
 
 ```crystal
 class Person
 end
 ```
 
-Class names, and every type name, begin with a capital letter in Crystal.
+В языке Crystal имена классов и каждого типа начинаются с прописной буквы.

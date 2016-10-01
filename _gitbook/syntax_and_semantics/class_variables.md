@@ -24,32 +24,28 @@ Counter.instances #=> 3
 
 Class variables can be read and written from class methods or instance methods.
 
-If a class variable is read before it is assigned a value, it will include the `Nil` type:
+Their type is inferred using the [global type inference algorithm](type_inference.html).
 
-```crystal
-class Counter
-  def self.increment
-    @@instances += 1
-  end
-end
-
-Counter.increment # Error: undefined method '+' for Nil
-```
-
-Class variables are always associated to a single type and are not inherited:
+Class variables are inherited by subclasses with this meaning: their type is the same, but each class has a different runtime value. For example:
 
 ```crystal
 class Parent
-  @@counter = 0
-end
+  @@numbers = [] of Int32
 
-class Child < Parent
-  def self.counter
-    @@counter
+  def self.numbers
+    @@numbers
   end
 end
 
-Child.counter #=> nil
+class Child < Parent
+end
+
+Parent.numbers # => []
+Child.numbers # => []
+
+Parent.numbers << 1
+Parent.numbers # => [1]
+Child.numbers # => []
 ```
 
-Class variables can also be associated to modules and structs. Like above, they are not inherited by including types.
+Class variables can also be associated to modules and structs. Like above, they are inherited by including/subclassing types.

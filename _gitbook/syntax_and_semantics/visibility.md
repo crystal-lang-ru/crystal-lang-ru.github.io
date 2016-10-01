@@ -4,6 +4,8 @@ Methods are public by default: the compiler will always let you invoke them. Bec
 
 Methods can be marked as `private` or `protected`.
 
+## Private methods
+
 A `private` method can only be invoked without a receiver, that is, without something before the dot:
 
 ```crystal
@@ -32,9 +34,44 @@ class Employee < Person
 end
 ```
 
-A `protected` method can only be invoked on instances of the same type as the current type:
+## Private types
+
+Private types can only be referenced inside the namespace where they are defined, and never be fully qualified.
 
 ```crystal
+class Foo
+  private class Bar
+  end
+
+  Bar      # OK
+  Foo::Bar # Error
+end
+
+Foo::Bar # Error
+```
+
+`private` can be used with `class`, `module`, `lib`, `enum`, `alias` and constants:
+
+```crystal
+class Foo
+  private ONE = 1
+
+  ONE # => 1
+end
+
+Foo::ONE # Error
+```
+
+## Protected methods
+
+A `protected` method can only be invoked on:
+
+1. instances of the same type as the current type
+2. instances in the same namespace (class, struct, module, etc.) as the current type
+
+```crystal
+### Example of 1
+
 class Person
   protected def say(message)
     puts message
@@ -60,6 +97,25 @@ end
 one_more = Person.new "One more"
 one_more.say "hello" # Error, one_more is a Person
                      # but current type is the Program
+
+### Example of 2
+
+module Namespace
+  class Foo
+    protected def foo
+      puts "Hello"
+    end
+  end
+
+  class Bar
+    def bar
+      # Works, because Foo and Bar are under Namespace
+      Foo.new.foo
+    end
+  end
+end
+
+Namespace::Bar.new.bar
 ```
 
 A `protected` class method can be invoked from an instance method and the other way around:
@@ -95,3 +151,23 @@ greet # undefined local variable or method 'greet'
 ```
 
 This allows you to define helper methods in a file that will only be known in that file.
+
+## Private top-level types
+
+A `private` top-level type is only visibile in the current file.
+
+```crystal
+# In file one.cr
+private class Greeter
+  def self.greet
+    "Hello"
+  end
+end
+
+Greeter.greet #=> "Hello"
+
+# In file two.cr
+require "./one"
+
+Greeter.greet # undefined constant 'Greeter'
+```

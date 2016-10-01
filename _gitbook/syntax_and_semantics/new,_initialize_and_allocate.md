@@ -12,7 +12,7 @@ We can't do much with `person`, so lets add some concepts to it. A `Person` has 
 
 ```crystal
 class Person
-  def initialize(name)
+  def initialize(name : String)
     @name = name
     @age = 0
   end
@@ -39,21 +39,22 @@ john.age #=> 0
 peter.name #=> "Peter"
 ```
 
+(If you wonder why we needed to specify that `name` is a `String` but we didn't need to do it for `age`, check the [global type inference algorithm](type_inference.html))
+
 Note that we create a `Person` with `new` but we defined the initialization in an `initialize` method, not in a `new` method. Why is this so?
 
 The answer is that when we defined an `initialize` method Crystal defined a `new` method for us, like this:
 
 ```crystal
 class Person
-  def self.new(name)
+  def self.new(name : String)
     instance = Person.allocate
     instance.initialize(name)
     instance
   end
- end
+end
 ```
 
 First, note the `self.new` notation. This means that the method belongs to the **class** `Person`, not to particular instances of that class. This is why we can do `Person.new`.
 
 Second, `allocate` is a low-level class method that creates an uninitialized object of the given type. It basically allocates the necessary memory for it. Then `initialize` is invoked on it and then you get the instance. You generally never invoke `allocate`, as it is [unsafe](unsafe.html), but that's the reason why `new` and `initialize` are related.
-

@@ -39,6 +39,44 @@ end
 twice { puts "Hello!" }
 ```
 
+The difference between using `do ... end` and `{ ... }` is that `do ... end` binds to the left-most call, while `{ ... }` binds to the right-most call:
+
+```crystal
+foo bar do
+  something
+end
+
+# The above is the same as
+foo(bar) do
+  something
+end
+
+foo bar { something }
+
+# The above is the same as
+
+foo(bar { something })
+```
+
+The reason for this is to allow creating Domain Specific Languages (DSLs) using `do ... end` to have them be read as plain English:
+
+```crystal
+open file "foo.cr" do
+  something
+end
+
+# Same as:
+open(file("foo.cr")) do
+end
+```
+
+You wouldn't want the above to be:
+
+```crystal
+open(file("foo.cr") do
+end)
+```
+
 ## Overloads
 
 Two methods, one that yields and another that doesn't, are considered different overloads, as explained in the [overloading](overloading.html) section.
@@ -94,7 +132,7 @@ end
 # Output: 3
 ```
 
-A block can also specify more than the arguments yielded, and these will be `nil`:
+It's an error specifying more block arguments than those yielded:
 
 ```crystal
 def twice
@@ -102,12 +140,9 @@ def twice
   yield
 end
 
-twice do |i|
-  puts i.inspect
+twice do |i| # Error: too many block arguments
 end
 ```
-
-The above outputs "nil" twice.
 
 Each block variable has the type of every yield expression in that position. For example:
 
@@ -115,7 +150,7 @@ Each block variable has the type of every yield expression in that position. For
 def some
   yield 1, 'a'
   yield true, "hello"
-  yield 2
+  yield 2, nil
 end
 
 some do |first, second|
@@ -343,6 +378,30 @@ end
 Foo.new.yield_with_self { one } # => 1
 Foo.new.yield_normally { one }  # => "one"
 ```
+
+## Unpacking block arguments
+
+A block argument can specify sub-arguments enclosed in parentheses:
+
+```crystal
+array = [{1, "one"}, {2, "two"}]
+array.each do |(number, word)|
+  puts "#{number}: #{word}"
+end
+```
+
+The above is simply syntax sugar of this:
+
+```crystal
+array = [{1, "one"}, {2, "two"}]
+array.each do |arg|
+  number = arg[0]
+  word = arg[1]
+  puts "#{number}: #{word}"
+end
+```
+
+That means that any type that responds to `[]` with integers can be unpacked in a block argument.
 
 ## Performance
 
