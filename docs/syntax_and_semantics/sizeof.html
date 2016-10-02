@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.11.2" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.11.2" data-basepath=".." data-revision="Sun Oct 02 2016 22:34:02 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1996,17 +1996,17 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="sizeof">sizeof</h1>
-<p>The <code>sizeof</code> expression returns an <code>Int32</code> with the size in bytes of a given type. For example:</p>
+<p>&#x412;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; <code>sizeof</code> &#x432;&#x43E;&#x437;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; <code>Int32</code> &#x441; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x440;&#x43E;&#x43C; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x442;&#x438;&#x43F;&#x430; &#x432; &#x431;&#x430;&#x439;&#x442;&#x430;&#x445;. &#x414;&#x43B;&#x44F; &#x43F;&#x440;&#x438;&#x43C;&#x435;&#x440;&#x430;:</p>
 <pre><code class="lang-crystal"><span class="hljs-keyword">sizeof</span>(<span class="hljs-constant">Int32</span>)  <span class="hljs-comment">#=&gt; 4</span>
 <span class="hljs-keyword">sizeof</span>(<span class="hljs-constant">Int64</span>)  <span class="hljs-comment">#=&gt; 8</span>
 </code></pre>
-<p>For <a href="http://crystal-lang.org/api/Reference.html" target="_blank">Reference</a> types, the size is the same as the size of a pointer:</p>
-<pre><code class="lang-crystal"><span class="hljs-comment"># On a 64 bits machine</span>
+<p>&#x414;&#x43B;&#x44F; <a href="http://crystal-lang.org/api/Reference.html" target="_blank">&#x441;&#x441;&#x44B;&#x43B;&#x43E;&#x447;&#x43D;&#x44B;&#x445;</a> &#x442;&#x438;&#x43F;&#x43E;&#x432; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x440; &#x442;&#x438;&#x43F;&#x430; &#x430;&#x43D;&#x430;&#x43B;&#x43E;&#x433;&#x438;&#x447;&#x435;&#x43D; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x440;&#x443; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x435;&#x43B;&#x44F;:</p>
+<pre><code class="lang-crystal"><span class="hljs-comment"># &#x41D;&#x430; 64-&#x431;&#x438;&#x442;&#x43D;&#x44B;&#x445; &#x43C;&#x430;&#x448;&#x438;&#x43D;&#x430;&#x445;</span>
 <span class="hljs-keyword">sizeof</span>(<span class="hljs-constant">Pointer</span>(<span class="hljs-constant">Int32</span>)) <span class="hljs-comment">#=&gt; 8</span>
 <span class="hljs-keyword">sizeof</span>(<span class="hljs-constant">String</span>)         <span class="hljs-comment">#=&gt; 8</span>
 </code></pre>
-<p>This is because a Reference&apos;s memory is allocated on the heap and a pointer to it is passed around. To get the effective size of a class, use <a href="instance_sizeof.html">instance_sizeof</a>.</p>
-<p>The argument to sizeof is a <a href="type_grammar.html">type</a> and is often combined with <a href="typeof.html">typeof</a>:</p>
+<p>&#x422;&#x430;&#x43A; &#x43F;&#x43E;&#x442;&#x43E;&#x43C;&#x443;, &#x447;&#x442;&#x43E; &#x43F;&#x430;&#x43C;&#x44F;&#x442;&#x44C; &#x437;&#x430;&#x440;&#x435;&#x437;&#x435;&#x440;&#x432;&#x438;&#x440;&#x43E;&#x432;&#x430;&#x43D;&#x430; &#x432; &#x43A;&#x443;&#x447;&#x435; &#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x435;&#x442;&#x441;&#x44F; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x435;&#x43B;&#x44C; &#x43D;&#x430; &#x43D;&#x435;&#x435;. &#x427;&#x442;&#x43E; &#x431;&#x44B; &#x43F;&#x43E;&#x43B;&#x443;&#x447;&#x438;&#x442;&#x44C; &#x434;&#x435;&#x439;&#x441;&#x442;&#x432;&#x438;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x44B;&#x439; &#x440;&#x430;&#x437;&#x43C;&#x435;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x441;&#x430;, &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x439;&#x442;&#x435; <a href="instance_sizeof.html">instance_sizeof</a>.</p>
+<p>&#x410;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; &#x434;&#x43B;&#x44F; sizeof &#x44D;&#x442;&#x43E; <a href="type_grammar.html">&#x442;&#x438;&#x43F;</a>, &#x43F;&#x43E;&#x44D;&#x442;&#x43E;&#x43C;&#x443; sizeof &#x447;&#x430;&#x441;&#x442;&#x43E; &#x438;&#x441;&#x43F;&#x43E;&#x43B;&#x44C;&#x437;&#x443;&#x44E;&#x442; &#x432; &#x43A;&#x43E;&#x43C;&#x431;&#x438;&#x43D;&#x430;&#x446;&#x438;&#x438; &#x441; <a href="typeof.html">typeof</a>:</p>
 <pre><code class="lang-crystal">a = <span class="hljs-number">1</span>
 <span class="hljs-keyword">sizeof</span>(typeof(a)) <span class="hljs-comment">#=&gt; 4</span>
 </code></pre>
