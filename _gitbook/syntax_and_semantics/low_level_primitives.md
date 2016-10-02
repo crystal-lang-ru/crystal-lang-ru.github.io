@@ -1,3 +1,3 @@
-# Low-level primitives
+# Низкоуровнивые примитивы
 
-Some low-level primitives are provided. They are mostly useful for interfacing with C libraries and for low-level code.
+Поддерживаются некоторые низкоуровневые примитивы. Они полезны для интеграции C библиотек и для низкоуровнего кода.
