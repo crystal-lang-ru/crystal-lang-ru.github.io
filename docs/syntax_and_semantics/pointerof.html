@@ -36,7 +36,7 @@
     <body>
         
         
-    <div class="book" data-level="4.11.1" data-basepath=".." data-revision="Mon Mar 21 2016 20:28:19 GMT+1000 (VLAT)">
+    <div class="book" data-level="4.11.1" data-basepath=".." data-revision="Tue Oct 04 2016 19:12:36 GMT+1000 (VLAT)">
     
 
 <div class="book-summary">
@@ -1996,8 +1996,8 @@
                     <section class="normal" id="section-">
                     
                         <h1 id="pointerof">pointerof</h1>
-<p>The <code>pointerof</code> expression returns a <a href="http://crystal-lang.org/api/Pointer.html" target="_blank">Pointer</a> that points to the contents of a variable or instance variable.</p>
-<p>An example with a variable:</p>
+<p>&#x412;&#x44B;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x435; <code>pointerof</code> &#x432;&#x43E;&#x437;&#x432;&#x440;&#x430;&#x449;&#x430;&#x435;&#x442; <a href="http://crystal-lang.org/api/Pointer.html" target="_blank">&#x423;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x435;&#x43B;&#x44C;</a>, &#x43A;&#x43E;&#x442;&#x43E;&#x440;&#x44B;&#x439; &#x443;&#x43A;&#x430;&#x437;&#x44B;&#x432;&#x430;&#x435;&#x442; &#x43D;&#x430; &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x43C;&#x43E;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439; &#x438;&#x43B;&#x438; &#x44D;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439;.</p>
+<p>&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439;:</p>
 <pre><code class="lang-crystal">a = <span class="hljs-number">1</span>
 
 ptr = <span class="hljs-keyword">pointerof</span>(a)
@@ -2005,7 +2005,7 @@ ptr.value = <span class="hljs-number">2</span>
 
 a <span class="hljs-comment">#=&gt; 2</span>
 </code></pre>
-<p>An example with an instance variable:</p>
+<p>&#x41F;&#x440;&#x438;&#x43C;&#x435;&#x440; &#x441; &#x44D;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x43E;&#x43C; &#x43F;&#x435;&#x440;&#x435;&#x43C;&#x435;&#x43D;&#x43D;&#x43E;&#x439;:</p>
 <pre><code class="lang-crystal"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Point</span></span>
   <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span></span>(<span class="hljs-variable">@x</span>, <span class="hljs-variable">@y</span>)
   <span class="hljs-keyword">end</span>
@@ -2026,7 +2026,7 @@ ptr.value = <span class="hljs-number">10</span>
 
 point.x <span class="hljs-comment">#=&gt; 10</span>
 </code></pre>
-<p>Because <code>pointerof</code> involves pointers, it is considered <a href="unsafe.html">unsafe</a>.</p>
+<p>&#x422;&#x430;&#x43A; &#x43A;&#x430;&#x43A; <code>pointerof</code> &#x441;&#x43E;&#x434;&#x435;&#x440;&#x436;&#x438;&#x442; &#x443;&#x43A;&#x430;&#x437;&#x430;&#x442;&#x435;&#x43B;&#x438;, &#x442;&#x43E; &#x43E;&#x43D; &#x441;&#x447;&#x438;&#x442;&#x430;&#x435;&#x442;&#x441;&#x44F; <a href="unsafe.html">&#x43D;&#x435;&#x431;&#x435;&#x437;&#x43E;&#x43F;&#x430;&#x441;&#x43D;&#x44B;&#x43C;</a>.</p>
 
                     
                     </section>
