@@ -2,52 +2,52 @@
 layout: default
 ---
 <section>
-  <h1>Цели языка</h1>
-  <ul class='goals'>
-    <li>Ruby-подобный синтаксис.</li>
-    <li>Статическая типизация, но без указания типа переменных или аргументов метода.</li>
-    <li>Возможность вызывать код на C путем написания биндингов внутри Crystal.</li>
-    <li>Есть оценка времени компиляции и генерации кода, дабы избежать шаблонности кода.</li>
-    <li>Эффективная компиляция в машинный код.</li>
-  </ul>
+<h1>Цели языка</h1>
+<ul class='goals'>
+<li>Ruby-подобный синтаксис.</li>
+<li>Статическая типизация, но без указания типа переменных или аргументов метода.</li>
+<li>Возможность вызывать код на C путем написания биндингов внутри Crystal.</li>
+<li>Есть оценка времени компиляции и генерации кода, дабы избежать шаблонности кода.</li>
+<li>Эффективная компиляция в машинный код.</li>
+</ul>
 </section>
 <section>
-  <h1>Как это выглядит</h1>
-  <div class='code_section'>
-    {% include sample_code.md %}
-  </div>
+<h1>Как это выглядит</h1>
+<div class='code_section'>
+{% include sample_code.md %}
+</div>
 </section>
 <section>
-  <h1>Статус</h1>
-  <p>
-    <ul class='goals'>
-      <li>Проект в альфа-стадии: мы продолжаем дорабатывать язык и стандартную библиотеку.</li>
-      <li>Компилятор написан на Crystal.</li>
-    </ul>
-  </p>
+<h1>Статус</h1>
+<p>
+<ul class='goals'>
+<li>Проект в альфа-стадии: мы продолжаем дорабатывать язык и стандартную библиотеку.</li>
+<li>Компилятор написан на Crystal.</li>
+</ul>
+</p>
 </section>
 <section>
-  <h1>Сообщество</h1>
-  <p>
-    Все вопросы и предложения в нашей группе
-    <i class='ip group'></i>
-    <a href='https://groups.google.com/forum/?fromgroups#!forum/crystal-lang' target='_blank'>Google Group</a>
-    или вступите в наш IRC канал #crystal-lang на irc.freenode.net
-  </p>
+<h1>Сообщество</h1>
+<p>
+Все вопросы и предложения в нашей группе
+<i class='ip group'></i>
+<a href='https://groups.google.com/forum/?fromgroups#!forum/crystal-lang' target='_blank'>Google Group</a>
+или вступите в наш IRC канал #crystal-lang на irc.freenode.net
+</p>
 </section>
 <section>
-  <h1>Записи из нашего блога</h1>
-  <div class='blog_roll'>
-    {% for post in site.posts %}
-    <article>
-      <div class='thumbnail'>
-        <p>{{ post.thumbnail }}</p>
-      </div>
-      <h3>
-        <a href='{{post.url}}'>{{ post.title }}</a>
-      </h3>
-      <p>{{ post.summary }}</p>
-    </article>
-    {% endfor %}
-  </div>
+<h1>Записи из нашего блога</h1>
+<div class='blog_roll'>
+{% for post in site.posts %}
+<article>
+<div class='thumbnail'>
+<p>{{ post.thumbnail }}</p>
+</div>
+<h3>
+<a href='{{post.url}}'>{{ post.title }}</a>
+</h3>
+<p>{{ post.summary }}</p>
+</article>
+{% endfor %}
+</div>
 </section>
